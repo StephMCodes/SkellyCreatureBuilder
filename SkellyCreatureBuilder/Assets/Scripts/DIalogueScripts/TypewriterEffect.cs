@@ -9,10 +9,10 @@ public class TypewriterEffect : MonoBehaviour
     //string is what we want to type, label is what we type it on
 
     [SerializeField] private float typewriterSpeed = 50f;
-    public void Run(string textToType, TMP_Text textLabel)
+    public Coroutine Run(string textToType, TMP_Text textLabel)
     {
         //call ienumerator method
-        StartCoroutine(TypeText(textToType, textLabel));
+        return StartCoroutine(TypeText(textToType, textLabel));
     }
 
     private IEnumerator TypeText(string textToType, TMP_Text textLabel)
