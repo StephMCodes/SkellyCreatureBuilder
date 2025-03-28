@@ -16,7 +16,7 @@ public class ResponseHandler : MonoBehaviour
         float responseBoxHeight = 0;
         foreach (Response response in responses)
         {
-            //clone from prefab (?)
+            //clone
             GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
             responseButton.gameObject.SetActive(true);
             responseButton.GetComponent<TMP_Text>().text = response.ResponseText;

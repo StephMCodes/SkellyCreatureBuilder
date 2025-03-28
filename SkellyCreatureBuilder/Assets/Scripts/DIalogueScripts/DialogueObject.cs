@@ -12,4 +12,7 @@ public class DialogueObject : ScriptableObject
     public string[] Dialogue => dialogue; //returns private dialogue string array
     //response getter
     public Response[] Responses => responses;
+
+    //getter to see if has responses
+    public bool HasResponses => Responses != null && Responses.Length > 0;
 }
