@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
-  m_Name: TestDialogue
+  m_Name: TestYes
   m_EditorClassIdentifier: 
   dialogue:
-  - LOREM IPSUM DOLOR LOREM IPSUM DOLOR LOREM IPSUM DOLOR ????!!!!.
-  - Cool huh?
+  - You said yes to the test.
