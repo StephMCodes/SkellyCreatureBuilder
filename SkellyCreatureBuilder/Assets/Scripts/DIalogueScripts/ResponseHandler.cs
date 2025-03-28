@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ResponseHandler : MonoBehaviour
 {
@@ -9,6 +10,17 @@ public class ResponseHandler : MonoBehaviour
     [SerializeField] private RectTransform responseBox;
     [SerializeField] private RectTransform responseButtonTemplate;
     [SerializeField] private RectTransform responseContainer;
+
+    //reference to dialogue ui script
+    private DialogueUI dialogueUI;
+
+    //list to track created buttons (for their later removal)
+    private List<GameObject> tempResponseButtons = new List<GameObject>();
+
+    private void Start()
+    {
+        dialogueUI = GetComponent<DialogueUI>();
+    }
 
     //driver method
     public void ShowResponses(Response[] responses)
@@ -24,6 +36,9 @@ public class ResponseHandler : MonoBehaviour
             //this programatically adds the function to the button!
             responseButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response));
 
+            //add to temp list
+            tempResponseButtons.Add(responseButton);
+
             //keep track of how high to make box for every option available
             responseBoxHeight += responseButtonTemplate.sizeDelta.y;
         }
@@ -37,7 +52,17 @@ public class ResponseHandler : MonoBehaviour
 
     private void OnPickedResponse (Response response)
     {
-
+        //hide response choice box
+        responseBox.gameObject.SetActive(false);
+        //show response
+        dialogueUI.ShowDialogue(response.DialogueObject);
+        //clear out the buttons created previously
+        foreach (GameObject button in tempResponseButtons)
+        {
+            Destroy(button);
+        }
+        //clear list
+        tempResponseButtons.Clear();
     }
 
 }

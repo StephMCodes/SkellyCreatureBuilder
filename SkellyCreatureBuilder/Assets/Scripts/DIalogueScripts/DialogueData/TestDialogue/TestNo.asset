@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TestNo
   m_EditorClassIdentifier: 
   dialogue:
-  - You said yes to the test.
+  - You said no to the test.
+  responses: []
