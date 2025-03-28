@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: SkellyCreatureBuilder
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 6bb8c2f63eb6c0c4eb39c2b3b0009016, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
