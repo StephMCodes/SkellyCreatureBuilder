@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 205028193}
   m_Layer: 5
-  m_Name: DIalogueBox
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,8 +551,8 @@ MonoBehaviour:
 
     New Text'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
-  m_sharedMaterial: {fileID: 8992645588986312400, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -576,8 +576,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.92
-  m_fontSizeBase: 23.92
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -744,6 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1351678452}
   testDialogue: {fileID: 11400000, guid: 6f0fcd0cce0edb945b25b2bb6cfaedb6, type: 2}
+  dialogueBox: {fileID: 205028192}
 --- !u!114 &1634976522
 MonoBehaviour:
   m_ObjectHideFlags: 0
