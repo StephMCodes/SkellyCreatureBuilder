@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - LOREM IPSUM DOLOR LOREM IPSUM DOLOR LOREM IPSUM DOLOR LOREM IPSUM DOLOR ????!!!!.
+  - LOREM IPSUM DOLOR LOREM IPSUM DOLOR LOREM IPSUM DOLOR ????!!!!.
   - Cool huh?
