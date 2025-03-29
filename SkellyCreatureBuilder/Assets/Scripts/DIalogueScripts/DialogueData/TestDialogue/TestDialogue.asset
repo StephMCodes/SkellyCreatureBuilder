@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - LOREM IPSUM DOLOR LOREM IPSUM DOLOR LOREM IPSUM DOLOR ????!!!!.
-  - Cool huh?
+  - Im Scraps! You might know me as the Garbage Collector...
+  - Are you up for the test? Let me know!
   responses:
   - responseText: Say yes
     dialogueObject: {fileID: 11400000, guid: 395267c11a8c5314199a6e6da0861e17, type: 2}
