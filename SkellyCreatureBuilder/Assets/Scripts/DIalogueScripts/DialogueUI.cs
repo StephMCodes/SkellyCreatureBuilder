@@ -17,6 +17,7 @@ public class DialogueUI : MonoBehaviour
     //reference to dialogue box make sure to drag and drop to canvas in editor
     [SerializeField] private GameObject dialogueBox;
 
+
     public bool IsOpen { get; private set; } //only dialogue ui can set true or false. other scripts have readonly access
 
     private TypewriterEffect typewriterEffect;
@@ -69,13 +70,20 @@ public class DialogueUI : MonoBehaviour
         {
 
             string dialogue = dialogueObject.Dialogue[i];
-            yield return typewriterEffect.Run(dialogue, textLabel);
 
-            //check if at end of dialogue
-            if (i==dialogueObject.Dialogue.Length -1 && dialogueObject.HasResponses) break;
+            //yield return typewriterEffect.Run(dialogue, textLabel);
+            yield return RunTypingEffect(dialogue);
+
+            textLabel.text = dialogue; //we pulled it out of the typewriter effect earlier
             
-                //wait for input when typewriter effect is done
-                yield return new WaitUntil(() => Input.GetKey(KeyCode.Space));
+            //check if at end of dialogue
+            if (i == dialogueObject.Dialogue.Length - 1 && dialogueObject.HasResponses) break;
+
+            //add extra stop in case you press space so it doesnt jump to the yield return space
+            yield return null;
+            
+            //wait for input when typewriter effect is done
+            yield return new WaitUntil(() => Input.GetKey(KeyCode.Space));
         }
 
         //we dont want to close the box while you still have answers to give
@@ -88,6 +96,19 @@ public class DialogueUI : MonoBehaviour
             CloseDialogueBox();
         }
 
+    }
+
+    private IEnumerator RunTypingEffect(string dialogue)
+    {
+        typewriterEffect.Run(dialogue, textLabel);
+        while (typewriterEffect.IsRunning)
+        {
+            yield return null; //wait one frame
+            if (Input.GetKeyDown(KeyCode.LeftShift)) //space does not work
+            {
+                typewriterEffect.Stop();
+            }
+        }
     }
 
     //closing the dialogue box
