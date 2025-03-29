@@ -10,6 +10,8 @@ public class DialogueUI : MonoBehaviour
     //Reference to text label.
     //The canvas should reference the text child component of dialogue box (drag and drop into textLabel)
     [SerializeField] private TMP_Text textLabel;
+
+    //what to pass into for dialogue. this is for testing purposes (ep.5 removal)
     [SerializeField] private DialogueObject testDialogue;
 
     //reference to dialogue box make sure to drag and drop to canvas in editor
@@ -27,7 +29,8 @@ public class DialogueUI : MonoBehaviour
 
         CloseDialogueBox(); //clean up
 
-        ShowDialogue(testDialogue); //pass dialogue object
+        //method to make it appear on screen
+        //ShowDialogue(testDialogue); //passing dialogue object
 
 
         //test 1
