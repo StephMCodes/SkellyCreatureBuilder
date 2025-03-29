@@ -17,6 +17,8 @@ public class DialogueUI : MonoBehaviour
     //reference to dialogue box make sure to drag and drop to canvas in editor
     [SerializeField] private GameObject dialogueBox;
 
+    public bool IsOpen { get; private set; } //only dialogue ui can set true or false. other scripts have readonly access
+
     private TypewriterEffect typewriterEffect;
 
     //reference to response handler
@@ -44,6 +46,8 @@ public class DialogueUI : MonoBehaviour
     {
         //show box
         dialogueBox.SetActive(true);
+
+        IsOpen = true;
 
         //start coroutine to wait before each of the entries of dialogue
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -90,6 +94,7 @@ public class DialogueUI : MonoBehaviour
     private void CloseDialogueBox()
     {
         dialogueBox.SetActive(false);
+        IsOpen = false;
         textLabel.text = string.Empty;
     }
 }
