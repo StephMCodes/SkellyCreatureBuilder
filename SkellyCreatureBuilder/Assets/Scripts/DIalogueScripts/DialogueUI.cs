@@ -32,7 +32,7 @@ public class DialogueUI : MonoBehaviour
         CloseDialogueBox(); //clean up
 
         //method to make it appear on screen
-        //ShowDialogue(testDialogue); //passing dialogue object
+        ShowDialogue(testDialogue); //passing dialogue object
 
 
         //test 1
