@@ -12,12 +12,16 @@ public class TypewriterEffect : MonoBehaviour
     public bool IsRunning { get; private set; }
 
     //each punctuation can have a different wait time
-    private readonly Dictionary<HashSet<char>, float> punctuations = new Dictionary<HashSet<char>, float>()
+    private readonly List<Punctuation> punctuations = new List<Punctuation>()
     {
+        new Punctuation(new HashSet<char>(){'.','!','?'},0.4f),
+        new Punctuation(new HashSet<char>(){',',';',':'},0.2f)
+
+        
         //key = punctuation
         //value = wait time
-        {new HashSet<char>(){'.','!','?'},0.6f},
-        {new HashSet<char>(){',',';',':'},0.3f}
+        //{new HashSet<char>(){'.','!','?'},0.6f},
+        //{new HashSet<char>(){',',';',':'},0.3f}
     };
 
     [SerializeField] private float typewriterSpeed = 50f;
@@ -38,7 +42,7 @@ public class TypewriterEffect : MonoBehaviour
     private IEnumerator TypeText(string textToType, TMP_Text textLabel)
     {
         IsRunning = true;
-        
+
         //clean label
         textLabel.text = string.Empty;
 
@@ -72,7 +76,7 @@ public class TypewriterEffect : MonoBehaviour
                 {
                     yield return new WaitForSeconds(waitTime);
                 }
-                
+
             }
 
 
@@ -86,15 +90,27 @@ public class TypewriterEffect : MonoBehaviour
 
     private bool IsPunctuation(char ch, out float waitTime)
     {
-        foreach (KeyValuePair<HashSet<char>, float> punctuationCategory in punctuations)
+        foreach (Punctuation punctuationCategory in punctuations)
         {
-            if (punctuationCategory.Key.Contains(ch))
+            if (punctuationCategory.Punctuations.Contains(ch))
             {
-                waitTime = punctuationCategory.Value;
+                waitTime = punctuationCategory.WaitTime; //read from the readonly struct
                 return true;
             }
         }
         waitTime = default;
         return false;
+    }
+
+    private readonly struct Punctuation
+    {
+        public readonly HashSet<char> Punctuations;
+        public readonly float WaitTime;
+
+        public Punctuation(HashSet<char> punctuations, float waitTime)
+        {
+            Punctuations = punctuations;
+            WaitTime = waitTime;
+        }
     }
 }

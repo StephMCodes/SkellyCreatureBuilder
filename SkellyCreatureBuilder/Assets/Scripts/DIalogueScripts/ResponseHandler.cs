@@ -11,8 +11,9 @@ public class ResponseHandler : MonoBehaviour
     [SerializeField] private RectTransform responseButtonTemplate;
     [SerializeField] private RectTransform responseContainer;
 
-    //reference to dialogue ui script
+    //reference to dialogue ui script and response events script
     private DialogueUI dialogueUI;
+    private ResponseEvent[] responseEvents;
 
     //list to track created buttons (for their later removal)
     private List<GameObject> tempResponseButtons = new List<GameObject>();
@@ -26,15 +27,17 @@ public class ResponseHandler : MonoBehaviour
     public void ShowResponses(Response[] responses)
     {
         float responseBoxHeight = 0;
-        foreach (Response response in responses)
+        for (int i=0; i<responses.Length; i++)
         {
+            Response response = responses[i];
+            int responseIndex = i;
             //clone
             GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
             responseButton.gameObject.SetActive(true);
             responseButton.GetComponent<TMP_Text>().text = response.ResponseText;
             //addlistener attaches a delegate/function to the onclick
             //this programatically adds the function to the button!
-            responseButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response));
+            responseButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response, responseIndex));
 
             //add to temp list
             tempResponseButtons.Add(responseButton);
@@ -50,7 +53,7 @@ public class ResponseHandler : MonoBehaviour
         responseBox.gameObject.SetActive(true);
     }
 
-    private void OnPickedResponse (Response response)
+    private void OnPickedResponse (Response response, int responseIndex)
     {
         //hide response choice box
         responseBox.gameObject.SetActive(false);
@@ -63,6 +66,18 @@ public class ResponseHandler : MonoBehaviour
         }
         //clear list
         tempResponseButtons.Clear();
+
+        //check if index is in bounds within response array
+        if (responseEvents != null && responseIndex <= responseEvents.Length)
+        {
+            //check if there is a response event at the index if yes invoke the event
+            responseEvents[responseIndex].OnPickedResponse?.Invoke();
+        }
+    }
+
+    public void AddResponseEvents(ResponseEvent[] responseEvents )
+    {
+        this.responseEvents = responseEvents;
     }
 
 }

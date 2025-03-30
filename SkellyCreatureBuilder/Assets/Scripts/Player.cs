@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     //getter for dialogue ui
     public DialogueUI DialogueUI => dialogueUI;
 
-    public IInteractable interactable { get;set; } //can be set and read from outside
+    public IInteractable Interactable { get;set; } //can be set and read from outside
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +17,18 @@ public class Player : MonoBehaviour
         
     }
 
+    public void PlayerGetsDialogue ()
+    {
+        Interactable?.Interact(this);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (dialogueUI.IsOpen) return;
+        
+        
+        
         ////example from video
         //if (Input.GetKeyDown(KeyCode.E))
         //{

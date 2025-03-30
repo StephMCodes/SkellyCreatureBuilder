@@ -6,9 +6,47 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     //handles the call to dialogue ui interaction
 
     [SerializeField] private DialogueObject dialogueObject; //the convo of our character
-    public void Interact(Player player)
+    [SerializeField] private Player player;
+
+    void OnMouseOver()
     {
-        player.DialogueUI.ShowDialogue(dialogueObject);
+        //If your mouse hovers over the GameObject with the script attached, output this message
+        //Debug.Log("Mouse is over GameObject.");
+        //player.Interactable = this;
+        //Interact(player);
     }
+
+    void OnMouseExit()
+    {
+        //The mouse is no longer hovering over the GameObject so output this message each frame
+        //Debug.Log("Mouse is no longer on GameObject.");
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && player.DialogueUI.IsOpen == false)
+            Interact(player);
+
+        if (Input.GetMouseButtonDown(1))
+            Debug.Log("Pressed right-click.");
+
+        if (Input.GetMouseButtonDown(2))
+            Debug.Log("Pressed middle-click.");
+    }
+
+    public void Interact (Player player)
+    {
+           player.DialogueUI.ShowDialogue(dialogueObject);
+
+    }
+
+    //public void Interact(Player player)
+    //{
+    //    if (TryGetComponent(out DialogueResponseEvents responseEvents) && responseEvents.DialogueObject == dialogueObject)
+    //    {
+    //        player.DialogueUI.AddResponseEvents(responseEvents.Events);
+    //    }
+    //    player.DialogueUI.ShowDialogue(dialogueObject);
+    //}
 
 }
