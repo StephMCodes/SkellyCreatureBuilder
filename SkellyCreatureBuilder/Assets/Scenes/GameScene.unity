@@ -285,7 +285,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 135326005}
-  - component: {fileID: 135326006}
   m_Layer: 6
   m_Name: LeftHip
   m_TagString: Untagged
@@ -308,27 +307,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2113731481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &135326006
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135326004}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.42010435, y: 0.51978135, z: 0.26870242}
-  m_Center: {x: -0.02761258, y: 0.0006455583, z: 0.029929094}
 --- !u!1 &299687528
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +316,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299687529}
-  - component: {fileID: 299687530}
   m_Layer: 6
   m_Name: RightHip
   m_TagString: Untagged
@@ -361,27 +338,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2113731481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &299687530
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299687528}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.42010435, y: 0.51978135, z: 0.26870242}
-  m_Center: {x: -0.02761258, y: 0.0006455583, z: 0.029929094}
 --- !u!1 &341870054
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +347,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341870055}
-  - component: {fileID: 341870056}
   m_Layer: 6
   m_Name: LeftShoulder
   m_TagString: Untagged
@@ -414,27 +369,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2113731481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &341870056
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341870054}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.42010435, y: 0.51978135, z: 0.26870242}
-  m_Center: {x: -0.02761258, y: 0.0006455583, z: 0.029929094}
 --- !u!1 &361292714
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +918,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1770477484}
-  - component: {fileID: 1770477485}
   m_Layer: 6
   m_Name: RightShoulder
   m_TagString: Untagged
@@ -1007,27 +940,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2113731481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1770477485
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770477483}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.42010435, y: 0.51978135, z: 0.26870242}
-  m_Center: {x: -0.02761258, y: 0.0006455583, z: 0.029929094}
 --- !u!1 &2008570603
 GameObject:
   m_ObjectHideFlags: 0
