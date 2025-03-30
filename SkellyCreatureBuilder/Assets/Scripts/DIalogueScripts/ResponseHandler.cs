@@ -17,10 +17,13 @@ public class ResponseHandler : MonoBehaviour
 
     //list to track created buttons (for their later removal)
     private List<GameObject> tempResponseButtons = new List<GameObject>();
-
     private void Start()
     {
         dialogueUI = GetComponent<DialogueUI>();
+    }
+    public void AddResponseEvents(ResponseEvent[] responseEvents)
+    {
+        this.responseEvents = responseEvents;
     }
 
     //driver method
@@ -57,27 +60,36 @@ public class ResponseHandler : MonoBehaviour
     {
         //hide response choice box
         responseBox.gameObject.SetActive(false);
-        //show response
-        dialogueUI.ShowDialogue(response.DialogueObject);
+
         //clear out the buttons created previously
         foreach (GameObject button in tempResponseButtons)
         {
             Destroy(button);
         }
+
         //clear list
         tempResponseButtons.Clear();
 
+        //show response
+        dialogueUI.ShowDialogue(response.DialogueObject);
+        
         //check if index is in bounds within response array
         if (responseEvents != null && responseIndex <= responseEvents.Length)
         {
             //check if there is a response event at the index if yes invoke the event
             responseEvents[responseIndex].OnPickedResponse?.Invoke();
         }
-    }
 
-    public void AddResponseEvents(ResponseEvent[] responseEvents )
-    {
-        this.responseEvents = responseEvents;
+        responseEvents = null;
+
+        if (response.DialogueObject)
+        {
+            dialogueUI.ShowDialogue (response.DialogueObject);
+        }
+        else
+        {
+            dialogueUI.CloseDialogueBox();
+        }
     }
 
 }

@@ -27,17 +27,20 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         if (Input.GetMouseButtonDown(0) && player.DialogueUI.IsOpen == false)
             Interact(player);
 
-        if (Input.GetMouseButtonDown(1))
-            Debug.Log("Pressed right-click.");
+        //if (Input.GetMouseButtonDown(1))
+        //    Debug.Log("Pressed right-click.");
 
-        if (Input.GetMouseButtonDown(2))
-            Debug.Log("Pressed middle-click.");
+        //if (Input.GetMouseButtonDown(2))
+        //    Debug.Log("Pressed middle-click.");
     }
 
-    public void Interact (Player player)
+    public void Interact(Player player)
     {
-           player.DialogueUI.ShowDialogue(dialogueObject);
-
+        if (TryGetComponent(out DialogueResponseEvents responseEvents) && responseEvents.DialogueObject == dialogueObject)
+        {
+            player.DialogueUI.AddResponseEvents(responseEvents.Events);
+        }
+        player.DialogueUI.ShowDialogue(dialogueObject);
     }
 
     //public void Interact(Player player)
