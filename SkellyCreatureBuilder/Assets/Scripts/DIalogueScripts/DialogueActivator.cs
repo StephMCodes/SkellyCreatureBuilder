@@ -8,6 +8,11 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     [SerializeField] private DialogueObject dialogueObject; //the convo of our character
     [SerializeField] private Player player;
 
+    public void UpdateDialogueObject(DialogueObject dialogueObject)
+    {
+        this.dialogueObject = dialogueObject; //lets us change the dialogue
+    }
+
     void OnMouseOver()
     {
         //If your mouse hovers over the GameObject with the script attached, output this message
