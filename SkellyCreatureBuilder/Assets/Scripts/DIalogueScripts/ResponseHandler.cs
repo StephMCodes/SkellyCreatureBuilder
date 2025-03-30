@@ -80,6 +80,7 @@ public class ResponseHandler : MonoBehaviour
             responseEvents[responseIndex].OnPickedResponse?.Invoke();
         }
 
+        //fixing a bug
         responseEvents = null;
 
         if (response.DialogueObject)
