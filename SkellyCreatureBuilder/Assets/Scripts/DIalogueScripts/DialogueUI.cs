@@ -25,6 +25,10 @@ public class DialogueUI : MonoBehaviour
     //reference to response handler
     private ResponseHandler responseHandler;
 
+    public void AddResponseEvents(ResponseEvent[] responseEvents)
+    {
+        responseHandler.AddResponseEvents(responseEvents);
+    }
     private void Start()
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
@@ -33,7 +37,7 @@ public class DialogueUI : MonoBehaviour
         CloseDialogueBox(); //clean up
 
         //method to make it appear on screen
-        ShowDialogue(testDialogue); //passing dialogue object
+        //ShowDialogue(testDialogue); //passing dialogue object
 
 
         //test 1
@@ -112,10 +116,11 @@ public class DialogueUI : MonoBehaviour
     }
 
     //closing the dialogue box
-    private void CloseDialogueBox()
+    public void CloseDialogueBox()
     {
         dialogueBox.SetActive(false);
         IsOpen = false;
         textLabel.text = string.Empty;
     }
+    
 }

@@ -18,6 +18,6 @@ public class Debugging : MonoBehaviour
 
     public void DisplayDebug()
     {
-        Debug.Log("Button clicked");
+        Debug.Log("Response event fired");
     }
 }
