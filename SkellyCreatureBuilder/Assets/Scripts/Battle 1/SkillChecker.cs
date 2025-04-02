@@ -19,8 +19,6 @@ public class SkillChecker : MonoBehaviour
     void Start()
     {
         StartSkillCheck();
-        StartSkillCheck();
-        StartSkillCheck();
     }
 
     void Update()
@@ -71,11 +69,14 @@ public class SkillChecker : MonoBehaviour
         if (success)
         {
             Debug.Log(" SUCCESS!");
+            //winButton.SetActive(true);
             nextButton.SetActive(true);
+
         }
         else
         {
             Debug.Log(" FAILURE!");
+            //loseButton.SetActive(true);
             nextButton.SetActive(true);
         }
 
