@@ -38,7 +38,7 @@ public class MemoryGameScript : MonoBehaviour
         for (int i = 0; i < lightOrder.Length; i++)
         {
             lightOrder[i] = Random.Range(0, 8);
-            Debug.Log("light order: " +  lightOrder[i]);
+            Debug.Log("light order: " + lightOrder[i]);
         }
 
         for (int i = 0; i < rowLights.Length; i++)
@@ -68,6 +68,16 @@ public class MemoryGameScript : MonoBehaviour
         {
             buttons[i].GetComponent<Button>().interactable = false;
         }
+    }
+
+    public void OpenPanel()
+    {
+        simonSaysPanel.SetActive(true);
+    }
+
+    public void ClosePanel()
+    {
+        simonSaysPanel.SetActive(false);
     }
     IEnumerator ColorOrder()
     {
@@ -100,5 +110,68 @@ public class MemoryGameScript : MonoBehaviour
     public void ButtonClickOrder(int button)
     {
         //checks to see if youre clicking the right buttons in the right order
+        buttonsClicked++;
+        if (button == lightOrder[buttonsClicked - 1])
+        {
+            Debug.Log("pass");
+            passed = true;
+        }
+        else
+        {
+            Debug.Log("failed");
+            won = false;
+            passed = false;
+            StartCoroutine(ColorBlink(red));
+        }
+        //increment level
+        if (buttonsClicked == level && passed == true && buttonsClicked != 5)
+        {
+            level++;
+            passed = false;
+            StartCoroutine(ColorOrder());
+        }
+        //check if level is complete
+        if (buttonsClicked == level && passed == true && buttonsClicked == 5)
+        {
+            Debug.Log("beat the game");
+            won = true;
+            StartCoroutine(ColorBlink(green));
+        }
+    }
+
+    IEnumerator ColorBlink(Color32 colorToBlink)
+    {
+        DisableInteractableButtons();
+        for (int j = 0; j < 3; j++)
+        {
+            Debug.Log("I run this many times: " + j);
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].GetComponent<Image>().color = colorToBlink;
+            }
+            for (int i = 5; i < rowLights.Length; i++)
+            {
+                buttons[i].GetComponent<Image>().color = colorToBlink;
+            }
+            yield return new WaitForSeconds(.5f);
+
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].GetComponent<Image>().color = white;
+            }
+            for (int i = 5; i < rowLights.Length; i++)
+            {
+                buttons[i].GetComponent<Image>().color = white;
+            }
+            yield return new WaitForSeconds(.5f);
+        }
+
+        if (won)
+        {
+            Debug.Log("Game has been won");
+            ClosePanel();
+        }
+        EnableInteractableButtons();
+        OnEnable();
     }
 }
