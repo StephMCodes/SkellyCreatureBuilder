@@ -44,7 +44,7 @@ public class MemoryGameScript : MonoBehaviour
         for (int i = 0; i < rowLights.Length; i++)
         {
             //set all lights back to neutral colour
-            rowLights[i].GetComponent<Image>().color = white;
+            rowLights[i].GetComponent<SpriteRenderer>().color = white;
         }
 
         //start the game
@@ -91,15 +91,15 @@ public class MemoryGameScript : MonoBehaviour
                 Debug.Log(lightOrder[i]);
                 //grabs light order
                 //makes it invisible for a wait period between lights
-                lightArray[lightOrder[i]].GetComponent<Image>().color = invisible;
+                lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = invisible;
                 yield return new WaitForSeconds(lightSpeed);
                 //makes it green
-                lightArray[lightOrder[i]].GetComponent<Image>().color = green;
+                lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = green;
                 yield return new WaitForSeconds(lightSpeed);
                 //invis again
-                lightArray[lightOrder[i]].GetComponent<Image>().color = invisible;
+                lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = invisible;
                 //update row on left
-                rowLights[i].GetComponent<Image>().color = green;
+                rowLights[i].GetComponent<SpriteRenderer>().color = green;
 
             }
         }
@@ -146,22 +146,22 @@ public class MemoryGameScript : MonoBehaviour
         {
             Debug.Log("I run this many times: " + j);
             for (int i = 0; i < buttons.Length; i++)
-            {
-                buttons[i].GetComponent<Image>().color = colorToBlink;
+            {       
+                buttons[i].GetComponent<SpriteRenderer>().color = colorToBlink;
             }
             for (int i = 5; i < rowLights.Length; i++)
             {
-                buttons[i].GetComponent<Image>().color = colorToBlink;
+                buttons[i].GetComponent<SpriteRenderer>().color = colorToBlink;
             }
             yield return new WaitForSeconds(.5f);
 
             for (int i = 0; i < buttons.Length; i++)
             {
-                buttons[i].GetComponent<Image>().color = white;
+                buttons[i].GetComponent<SpriteRenderer>().color = white;
             }
             for (int i = 5; i < rowLights.Length; i++)
             {
-                buttons[i].GetComponent<Image>().color = white;
+                buttons[i].GetComponent<SpriteRenderer>().color = white;
             }
             yield return new WaitForSeconds(.5f);
         }
