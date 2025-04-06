@@ -49,7 +49,7 @@ public class MemoryGameScript : MonoBehaviour
 
         //start the game
         level = 1;
-        //StartCoroutine(ColorOrder());
+        StartCoroutine(ColorOrder());
 
     }
 
@@ -95,5 +95,10 @@ public class MemoryGameScript : MonoBehaviour
         }
         //now the player can click after we saw the lights flash
         EnableInteractableButtons();
+    }
+
+    public void ButtonClickOrder(int button)
+    {
+        //checks to see if youre clicking the right buttons in the right order
     }
 }
