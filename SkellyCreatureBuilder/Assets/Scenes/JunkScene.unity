@@ -542,13 +542,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonePrehabs:
-  - {fileID: 4858099004780283132, guid: f318fbc7f960ab844a8544b30a1d92ce, type: 3}
-  - {fileID: 1924958876260890022, guid: 753429cfefc14a646825825045d97973, type: 3}
-  - {fileID: 9082419327093071476, guid: fe0c805c178198d4fb1c600b7780ea19, type: 3}
-  - {fileID: 2900510804762594670, guid: c674da346b22aa44dad9dfe967340416, type: 3}
-  - {fileID: 6574891313555208745, guid: e1615e1e77f27b246afb28e61801ff64, type: 3}
+  - {fileID: 8739554569832216241, guid: 66d1861a74e13b14db348127ca2d9b2b, type: 3}
+  - {fileID: 1924958876260890022, guid: 8685faa7185025148976dd2df6c74074, type: 3}
+  - {fileID: 8739554569832216241, guid: 7ba25358cb71fac4197fce3213e7712d, type: 3}
+  - {fileID: 8739554569832216241, guid: 4c29b84b049d17b46883a63d3a5078ad, type: 3}
+  - {fileID: 8739554569832216241, guid: 6676d7726b5fa1e4189f463b8dd38be7, type: 3}
   spawnPoint: {fileID: 350187330}
-  spawnText: {fileID: 0}
+  spawnText: {fileID: 872999319}
 --- !u!4 &1147065925
 Transform:
   m_ObjectHideFlags: 0
