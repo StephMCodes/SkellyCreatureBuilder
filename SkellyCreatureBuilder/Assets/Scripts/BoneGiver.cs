@@ -11,7 +11,7 @@ public class BoneGiver : MonoBehaviour
 {
     public GameObject[] bonePrehabs;
     public Transform spawnPoint;
-    public Text spawnText;
+    public TMP_Text spawnText;
     // Start is called before the first frame update
     void Start()
     {
