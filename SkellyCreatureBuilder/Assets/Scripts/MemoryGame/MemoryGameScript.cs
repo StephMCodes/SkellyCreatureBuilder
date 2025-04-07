@@ -58,7 +58,7 @@ public class MemoryGameScript : MonoBehaviour
         //while the player watches the lights they cant click anything hence it being a memory game
         for (int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].GetComponent<Button>().interactable = true;
+            buttons[i].GetComponent<Button>().interactable = false;
         }
     }
     void EnableInteractableButtons()
@@ -66,7 +66,7 @@ public class MemoryGameScript : MonoBehaviour
         //while the player watches the lights they cant click anything hence it being a memory game
         for (int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].GetComponent<Button>().interactable = false;
+            buttons[i].GetComponent<Button>().interactable = true;
         }
     }
 
@@ -147,21 +147,21 @@ public class MemoryGameScript : MonoBehaviour
             Debug.Log("I run this many times: " + j);
             for (int i = 0; i < buttons.Length; i++)
             {       
-                buttons[i].GetComponent<SpriteRenderer>().color = colorToBlink;
+                buttons[i].GetComponent<Image>().color = colorToBlink;
             }
             for (int i = 5; i < rowLights.Length; i++)
             {
-                buttons[i].GetComponent<SpriteRenderer>().color = colorToBlink;
+                rowLights[i].GetComponent<SpriteRenderer>().color = colorToBlink;
             }
             yield return new WaitForSeconds(.5f);
 
             for (int i = 0; i < buttons.Length; i++)
             {
-                buttons[i].GetComponent<SpriteRenderer>().color = white;
+                buttons[i].GetComponent<Image>().color = white;
             }
             for (int i = 5; i < rowLights.Length; i++)
             {
-                buttons[i].GetComponent<SpriteRenderer>().color = white;
+                rowLights[i].GetComponent<SpriteRenderer>().color = white;
             }
             yield return new WaitForSeconds(.5f);
         }
