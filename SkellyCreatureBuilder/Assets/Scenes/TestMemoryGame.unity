@@ -292,11 +292,6 @@ MonoBehaviour:
   - {fileID: 1674134711}
   - {fileID: 1851370943}
   - {fileID: 1380578685}
-  - {fileID: 2021912710}
-  - {fileID: 221830564}
-  - {fileID: 2037878169}
-  - {fileID: 355050007}
-  - {fileID: 454941287}
   lightOrder: 090000000400000002000000000000000100000001000000010000000400000000000000
   lightSpeed: 0.3
 --- !u!114 &39106250
@@ -1204,10 +1199,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 543349916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 4.5, y: -0.5}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &221830566
 SpriteRenderer:
@@ -1380,10 +1375,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 543349916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 12.5, y: -0.5}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &355050009
 SpriteRenderer:
@@ -2159,10 +2154,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 543349916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 16.5, y: -0.5}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &454941289
 SpriteRenderer:
@@ -2878,12 +2873,12 @@ GameObject:
   - component: {fileID: 543349916}
   - component: {fileID: 543349917}
   m_Layer: 5
-  m_Name: LeftLightRow
+  m_Name: RightLightsRow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &543349916
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3339,7 +3334,7 @@ GameObject:
   - component: {fileID: 853073016}
   - component: {fileID: 853073017}
   m_Layer: 5
-  m_Name: RightLightRow
+  m_Name: LightsRow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3366,7 +3361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -381.74298, y: -253.65}
+  m_AnchoredPosition: {x: -363.8, y: -252.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853073017
@@ -5403,10 +5398,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 543349916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0.5, y: -0.5}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2021912712
 SpriteRenderer:
@@ -5676,10 +5671,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 543349916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 8.5, y: -0.5}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2037878171
 SpriteRenderer:
