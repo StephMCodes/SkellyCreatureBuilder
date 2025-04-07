@@ -8,6 +8,9 @@ public class BoneSpawner : MonoBehaviour
     public float spawnRate = 0.5f;
     public float gravityScale = 1f;
 
+    [Header("Spawn Area Settings")]
+    public Vector2 areaSize = new Vector2(5f, 2f); // Width and height of the spawn area
+
     void Start()
     {
         InvokeRepeating(nameof(SpawnIcon), 0, spawnRate);
@@ -17,8 +20,14 @@ public class BoneSpawner : MonoBehaviour
     {
         if (iconPrefabs.Length == 0) return;
 
-        // Spawn at BoneSpawner's position
-        Vector3 spawnPosition = transform.position;
+        // Random offset within the spawn area
+        Vector2 randomOffset = new Vector2(
+            Random.Range(-areaSize.x / 2f, areaSize.x / 2f),
+            Random.Range(-areaSize.y / 2f, areaSize.y / 2f)
+        );
+
+        // Final spawn position in world space
+        Vector3 spawnPosition = transform.position + (Vector3)randomOffset;
 
         GameObject icon = Instantiate(iconPrefabs[Random.Range(0, iconPrefabs.Length)], spawnPosition, Quaternion.identity);
 
@@ -28,5 +37,12 @@ public class BoneSpawner : MonoBehaviour
             rb = icon.AddComponent<Rigidbody2D>();
 
         rb.gravityScale = gravityScale;
+    }
+
+    // Optional: Draw the spawn area in Scene view
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(transform.position, areaSize);
     }
 }

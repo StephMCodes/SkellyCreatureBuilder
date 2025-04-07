@@ -60,12 +60,27 @@ public class Bone : MonoBehaviour
 
     void AttachTo(Transform socket)
     {
-        // new position for the bone
+        // Snap position and rotation
         transform.position = socket.position;
         transform.rotation = socket.rotation;
 
-        // bone becomes child to ribcage
+        // Parent it to the socket
         transform.SetParent(socket);
 
+        // Disable physics
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;  // Stops physics simulation
+            rb.useGravity = false;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        // Optional: Disable collider if needed to prevent interaction
+        Collider col = GetComponent<Collider>();
+        if (col != null)
+            col.enabled = false;
     }
+
 }
