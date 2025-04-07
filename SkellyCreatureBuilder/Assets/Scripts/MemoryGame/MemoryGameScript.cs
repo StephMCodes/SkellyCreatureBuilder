@@ -149,7 +149,7 @@ public class MemoryGameScript : MonoBehaviour
             {       
                 buttons[i].GetComponent<Image>().color = colorToBlink;
             }
-            for (int i = 5; i < rowLights.Length; i++)
+            for (int i = 0; i < rowLights.Length; i++)
             {
                 rowLights[i].GetComponent<SpriteRenderer>().color = colorToBlink;
             }
@@ -159,7 +159,7 @@ public class MemoryGameScript : MonoBehaviour
             {
                 buttons[i].GetComponent<Image>().color = white;
             }
-            for (int i = 5; i < rowLights.Length; i++)
+            for (int i = 0; i < rowLights.Length; i++)
             {
                 rowLights[i].GetComponent<SpriteRenderer>().color = white;
             }
