@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8739554569832216241, guid: 6676d7726b5fa1e4189f463b8dd38be7, type: 3}
+      propertyPath: m_TagString
+      value: skull
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -252,7 +256,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8435326840934266998, guid: 8685faa7185025148976dd2df6c74074, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1027639108}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1924958876260890022, guid: 8685faa7185025148976dd2df6c74074, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2113731482}
   m_SourcePrefab: {fileID: 100100000, guid: 8685faa7185025148976dd2df6c74074, type: 3}
 --- !u!1 &361292714
 GameObject:
@@ -1101,7 +1108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739554569832216241, guid: 7ba25358cb71fac4197fce3213e7712d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739554569832216241, guid: 7ba25358cb71fac4197fce3213e7712d, type: 3}
+      propertyPath: m_TagString
+      value: foot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1203,7 +1214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739554569832216241, guid: 4c29b84b049d17b46883a63d3a5078ad, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739554569832216241, guid: 4c29b84b049d17b46883a63d3a5078ad, type: 3}
+      propertyPath: m_TagString
+      value: hand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1311,7 +1326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739554569832216241, guid: 4c29b84b049d17b46883a63d3a5078ad, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739554569832216241, guid: 4c29b84b049d17b46883a63d3a5078ad, type: 3}
+      propertyPath: m_TagString
+      value: hand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1591,7 +1610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8035679497270938113, guid: dcf76214496f3ac47b2e4e5d1ed6e68e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1725,6 +1744,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8435326840934266998, guid: 8685faa7185025148976dd2df6c74074, type: 3}
   m_PrefabInstance: {fileID: 84782229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113731482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113731476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91134ede3cd3d0e49886a57636651d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSpeed: 1
+  footSpeedBonus: 0.5
+  baseStrength: 1
+  handStrengthBonus: 1
+  baseMental: 1
+  skullMentalBonus: 1
 --- !u!1001 &2129936863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1779,7 +1816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8739554569832216241, guid: 7ba25358cb71fac4197fce3213e7712d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739554569832216241, guid: 7ba25358cb71fac4197fce3213e7712d, type: 3}
+      propertyPath: m_TagString
+      value: foot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

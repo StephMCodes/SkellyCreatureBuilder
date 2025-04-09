@@ -31,9 +31,9 @@ public class BoneDetector : MonoBehaviour
             strength = baseStrength + handCount * handStrengthBonus;
             mental = baseMental + skullCount * skullMentalBonus;
 
-            Debug.Log($"foots: {footCount} -> speed: {speed}\n" +
-                      $"hands: {handCount} -> strength: {strength}\n" +
-                      $"skulls: {skullCount} -> mental: {mental}");
+            Debug.Log($"foots: {footCount} -> speed: {speed}");
+            Debug.Log($"hands: {handCount} -> strength: {strength}");
+            Debug.Log($"skulls: {skullCount} -> mental: {mental}");
         }
     }
 
