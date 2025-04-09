@@ -9,10 +9,13 @@ public class BoneDetector : MonoBehaviour
     public float footSpeedBonus = 0.5f;
     public float baseStrength = 1f;
     public float handStrengthBonus = 1f;
+    public float baseMental = 1f;
+    public float skullMentalBonus = 1f;
 
     // current stats
     public static float speed;
     public static float strength;
+    public static float mental;
 
     void Update()
     {
@@ -21,12 +24,16 @@ public class BoneDetector : MonoBehaviour
             // count how many grandchildren carry the given tag
             int footCount = CountTaggedParts("foot");
             int handCount = CountTaggedParts("hand");
+            int skullCount = CountTaggedParts("skull");
 
             // not the final way the stats should be counted but its a start
             speed = baseSpeed + footCount * footSpeedBonus;
             strength = baseStrength + handCount * handStrengthBonus;
+            mental = baseMental + skullCount * skullMentalBonus;
 
-            Debug.Log($"foots: {footCount} -> Speed: {speed}\nhands: {handCount} -> Strength: {strength}");
+            Debug.Log($"foots: {footCount} -> speed: {speed}\n" +
+                      $"hands: {handCount} -> strength: {strength}\n" +
+                      $"skulls: {skullCount} -> mental: {mental}");
         }
     }
 
