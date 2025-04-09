@@ -22,6 +22,8 @@ public class MemoryGameScript : MonoBehaviour
     [SerializeField] AudioClip witchLaugh;
     [SerializeField] AudioClip boneBreak;
     [SerializeField] AudioClip winSfx;
+    [SerializeField] AudioClip flip;
+
 
     private void Start()
     {
@@ -126,6 +128,9 @@ public class MemoryGameScript : MonoBehaviour
 
     public void ButtonClickOrder(int button)
     {
+        //sfx
+        audioSource.PlayOneShot(flip);
+        
         //checks to see if youre clicking the right buttons in the right order
         buttonsClicked++;
         if (button == lightOrder[buttonsClicked - 1])
