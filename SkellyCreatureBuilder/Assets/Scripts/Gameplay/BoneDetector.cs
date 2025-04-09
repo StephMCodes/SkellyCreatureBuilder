@@ -11,8 +11,8 @@ public class BoneDetector : MonoBehaviour
     public float handStrengthBonus = 1f;
 
     // current stats
-    float speed;
-    float strength;
+    public static float speed;
+    public static float strength;
 
     void Update()
     {
