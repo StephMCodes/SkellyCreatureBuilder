@@ -20,6 +20,8 @@ public class MemoryGameScript : MonoBehaviour
     //sfx
     private AudioSource audioSource;
     [SerializeField] AudioClip witchLaugh;
+    [SerializeField] AudioClip boneBreak;
+    [SerializeField] AudioClip winSfx;
 
     private void Start()
     {
@@ -136,6 +138,7 @@ public class MemoryGameScript : MonoBehaviour
             //take a skull away
             skulls--;
             Debug.Log("failed. skull count: " + skulls);
+            audioSource.PlayOneShot(boneBreak);
             won = false;
             passed = false;
             StartCoroutine(ColorBlink(red));
@@ -188,6 +191,7 @@ public class MemoryGameScript : MonoBehaviour
         {
             //Debug.Log("Game has been won");
             ClosePanel();
+            audioSource.PlayOneShot(winSfx);
             text.SetText("GAME WON");
             GameStatePanel.SetActive(true);
         }
@@ -195,7 +199,7 @@ public class MemoryGameScript : MonoBehaviour
         if (skulls == 0)
         {
             //Debug.Log("GAME OVER");
-            audioSource.PlayOneShot(witchLaugh, 1);
+            audioSource.PlayOneShot(witchLaugh);
             //ClosePanel();
             text.SetText("GAME OVER");
             GameStatePanel.SetActive(true);
