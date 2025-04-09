@@ -11,6 +11,12 @@ public class MemoryGameScript : MonoBehaviour
     [SerializeField] GameObject[] rowLights; //the top row tracking success
     [SerializeField] int[] lightOrder; //for the light pattern position
 
+    [SerializeField] TMPro.TMP_Text text;
+    [SerializeField] GameObject GameStatePanel;
+
+    //the amount of skulls is the amount youre allowed to lose
+    int skulls = 2;
+
     int level = 0;
     int buttonsClicked = 0;
     int colorOrderRunCount = 0;
@@ -118,10 +124,13 @@ public class MemoryGameScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("failed");
+            //take a skull away
+            skulls--;
+            Debug.Log("failed. skull count: " + skulls);
             won = false;
             passed = false;
             StartCoroutine(ColorBlink(red));
+            
         }
         //increment level
         if (buttonsClicked == level && passed == true && buttonsClicked != 5)
@@ -153,7 +162,7 @@ public class MemoryGameScript : MonoBehaviour
             {
                 rowLights[i].GetComponent<SpriteRenderer>().color = colorToBlink;
             }
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.3f);
 
             for (int i = 0; i < buttons.Length; i++)
             {
@@ -163,13 +172,24 @@ public class MemoryGameScript : MonoBehaviour
             {
                 rowLights[i].GetComponent<SpriteRenderer>().color = white;
             }
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.3f);
         }
 
         if (won)
         {
             Debug.Log("Game has been won");
             ClosePanel();
+            text.SetText("GAME WON");
+            GameStatePanel.SetActive(true);
+        }
+
+        if (skulls == 0)
+        {
+            Debug.Log("GAME OVER");
+            ClosePanel();
+            text.SetText("GAME OVER");
+            GameStatePanel.SetActive(true);
+
         }
         EnableInteractableButtons();
         OnEnable();
