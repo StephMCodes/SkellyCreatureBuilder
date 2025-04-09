@@ -17,6 +17,15 @@ public class MemoryGameScript : MonoBehaviour
     //the amount of skulls is the amount youre allowed to lose
     public static int skulls = 2;
 
+    //sfx
+    private AudioSource audioSource;
+    [SerializeField] AudioClip witchLaugh;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     int level = 0;
     int buttonsClicked = 0;
     int colorOrderRunCount = 0;
@@ -177,7 +186,7 @@ public class MemoryGameScript : MonoBehaviour
 
         if (won)
         {
-            Debug.Log("Game has been won");
+            //Debug.Log("Game has been won");
             ClosePanel();
             text.SetText("GAME WON");
             GameStatePanel.SetActive(true);
@@ -185,8 +194,9 @@ public class MemoryGameScript : MonoBehaviour
 
         if (skulls == 0)
         {
-            Debug.Log("GAME OVER");
-            ClosePanel();
+            //Debug.Log("GAME OVER");
+            audioSource.PlayOneShot(witchLaugh, 1);
+            //ClosePanel();
             text.SetText("GAME OVER");
             GameStatePanel.SetActive(true);
 
