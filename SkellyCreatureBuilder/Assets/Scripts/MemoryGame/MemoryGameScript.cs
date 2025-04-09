@@ -15,7 +15,7 @@ public class MemoryGameScript : MonoBehaviour
     [SerializeField] GameObject GameStatePanel;
 
     //the amount of skulls is the amount youre allowed to lose
-    int skulls = 2;
+    public static int skulls = 2;
 
     int level = 0;
     int buttonsClicked = 0;
