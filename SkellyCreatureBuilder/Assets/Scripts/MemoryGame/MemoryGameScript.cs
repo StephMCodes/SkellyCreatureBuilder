@@ -22,7 +22,8 @@ public class MemoryGameScript : MonoBehaviour
     [SerializeField] AudioClip witchLaugh;
     [SerializeField] AudioClip boneBreak;
     [SerializeField] AudioClip winSfx;
-    [SerializeField] AudioClip flip;
+    [SerializeField] AudioClip click;
+    [SerializeField] AudioClip click2;
 
 
     private void Start()
@@ -114,6 +115,7 @@ public class MemoryGameScript : MonoBehaviour
                 yield return new WaitForSeconds(lightSpeed);
                 //makes it green
                 lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = green;
+                audioSource.PlayOneShot(click2);
                 yield return new WaitForSeconds(lightSpeed);
                 //invis again
                 lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = invisible;
@@ -129,7 +131,7 @@ public class MemoryGameScript : MonoBehaviour
     public void ButtonClickOrder(int button)
     {
         //sfx
-        audioSource.PlayOneShot(flip);
+        audioSource.PlayOneShot(click);
         
         //checks to see if youre clicking the right buttons in the right order
         buttonsClicked++;

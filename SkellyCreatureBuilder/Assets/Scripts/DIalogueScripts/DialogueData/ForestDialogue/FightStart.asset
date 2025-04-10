@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
   m_Name: FightStart
   m_EditorClassIdentifier: 
-  dialogue: []
-  responses: []
+  dialogue:
+  - Upon arrival, you spot a cackling witch approaching you. In front of her lies
+    some sort of strength test.
+  - She proposes a challenge of Strength between your creations. A strong arm is
+    important!
+  - Who will rise to the occasion and who will crumble into bonepowder? Do you send
+    your creature to fight?
+  responses:
+  - responseText: Let's do it!
+    dialogueObject: {fileID: 0}
