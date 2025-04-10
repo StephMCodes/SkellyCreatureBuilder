@@ -16,9 +16,21 @@ public class SkillChecker : MonoBehaviour
 
     public GameObject nextButton;
 
+    // SFX
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip witchLaugh;
+    [SerializeField] AudioClip ding;
+    [SerializeField] AudioClip punch;
+    [SerializeField] AudioClip bonecrack;
+    [SerializeField] AudioClip winSfx;
+    //[SerializeField] AudioClip click;
+    //[SerializeField] AudioClip click2;
+
+
     void Start()
     {
         StartSkillCheck();
+        audioSource.PlayOneShot(ding);
     }
 
     void Update()
@@ -68,6 +80,7 @@ public class SkillChecker : MonoBehaviour
 
         if (success)
         {
+            audioSource.PlayOneShot(punch);
             Debug.Log(" SUCCESS!");
             //winButton.SetActive(true);
             nextButton.SetActive(true);
@@ -75,9 +88,11 @@ public class SkillChecker : MonoBehaviour
         }
         else
         {
+            audioSource.PlayOneShot(bonecrack);
             Debug.Log(" FAILURE!");
             //loseButton.SetActive(true);
             nextButton.SetActive(true);
+
         }
 
 
