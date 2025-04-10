@@ -104,6 +104,10 @@ public class DialogueUI : MonoBehaviour
 
     private IEnumerator RunTypingEffect(string dialogue)
     {
+        Debug.Log("Running typing effect...");
+        Debug.Log("TypewriterEffect is: " + typewriterEffect);
+        Debug.Log("TextLabel is: " + textLabel);
+
         typewriterEffect.Run(dialogue, textLabel);
         while (typewriterEffect.IsRunning)
         {

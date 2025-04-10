@@ -17,6 +17,7 @@ public class AutoDialogueUI : MonoBehaviour
     //reference to dialogue box make sure to drag and drop to canvas in editor
     [SerializeField] private GameObject dialogueBox;
 
+    [SerializeField] private Player player;
 
     public bool IsOpen { get; private set; } //only dialogue ui can set true or false. other scripts have readonly access
 
@@ -29,6 +30,15 @@ public class AutoDialogueUI : MonoBehaviour
     {
         responseHandler.AddResponseEvents(responseEvents);
     }
+
+    public void Interact(Player player)
+    {
+        if (TryGetComponent(out DialogueResponseEvents responseEvents) && responseEvents.DialogueObject == testDialogue)
+        {
+            player.DialogueUI.AddResponseEvents(responseEvents.Events);
+        }
+        player.DialogueUI.ShowDialogue(testDialogue);
+    }
     private void Start()
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
@@ -37,7 +47,9 @@ public class AutoDialogueUI : MonoBehaviour
         CloseDialogueBox(); //clean up
 
         //method to make it appear on screen
-        ShowDialogue(testDialogue); //passing dialogue object
+        //ShowDialogue(testDialogue); //passing dialogue object
+
+        //Interact(player);
 
 
         //test 1
