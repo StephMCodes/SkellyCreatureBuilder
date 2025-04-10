@@ -195,7 +195,7 @@ public class MemoryGameScript : MonoBehaviour
         if (won)
         {
             //Debug.Log("Game has been won");
-            ClosePanel();
+            //ClosePanel();
             audioSource.PlayOneShot(winSfx);
             text.SetText("GAME WON");
             GameStatePanel.SetActive(true);

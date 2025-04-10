@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: MemoryStart
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Upon arrival, you spot a haggard witch approaching you. '
-  - She proposes a challenge of Memory between your creations. Who will rise to the
-    occasion and who crumble away in despair?
-  - 'Do you fight or flee? '
+  - Upon arrival, you spot a haggard witch approaching you. In front of her lies
+    some sort of card game.
+  - She proposes a challenge of Memory between your creations. A keen eye is important!
+  - Are you ready?
   responses:
-  - responseText: Fight
-    dialogueObject: {fileID: 0}
-  - responseText: Flee
+  - responseText: Begin!
     dialogueObject: {fileID: 0}
