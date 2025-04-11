@@ -9,7 +9,7 @@ using TMPro;
 
 public class BoneGiver : MonoBehaviour
 {
-    public GameObject[] bonePrehabs;
+    public GameObject[] bonePrefabs;
     public Transform spawnPoint;
     public TMP_Text spawnText;
     // Start is called before the first frame update
@@ -36,10 +36,10 @@ public class BoneGiver : MonoBehaviour
     }
     void SpawnBones()
     {
-        if (bonePrehabs.Length == 0 || spawnPoint == null)
+        if (bonePrefabs.Length == 0 || spawnPoint == null)
             return;
-        int index = Random.Range(0, bonePrehabs.Length);
-        GameObject randomBone = bonePrehabs[index];
+        int index = Random.Range(0, bonePrefabs.Length);
+        GameObject randomBone = bonePrefabs[index];
 
         Instantiate(randomBone, spawnPoint.position, Quaternion.identity);
     }
