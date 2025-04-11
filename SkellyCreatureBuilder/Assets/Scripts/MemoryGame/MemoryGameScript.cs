@@ -13,6 +13,9 @@ public class MemoryGameScript : MonoBehaviour
 
     [SerializeField] TMPro.TMP_Text text;
     [SerializeField] GameObject GameStatePanel;
+    [SerializeField] GameObject MusicPlayer;
+    [SerializeField] GameObject Tiles;
+
 
     //the amount of skulls is the amount youre allowed to lose
     public static int skulls = 2;
@@ -197,8 +200,10 @@ public class MemoryGameScript : MonoBehaviour
         if (won)
         {
             //Debug.Log("Game has been won");
-            //ClosePanel();
+            MusicPlayer.SetActive(false);
             audioSource.PlayOneShot(winSfx);
+            //ClosePanel();
+            Tiles.SetActive(false);
             text.SetText("GAME WON");
             GameStatePanel.SetActive(true);
         }
@@ -206,8 +211,9 @@ public class MemoryGameScript : MonoBehaviour
         if (skulls == 0)
         {
             //Debug.Log("GAME OVER");
+            MusicPlayer.SetActive(false);
             audioSource.PlayOneShot(witchLaugh);
-            //ClosePanel();
+            Tiles.SetActive(false);
             text.SetText("GAME OVER");
             GameStatePanel.SetActive(true);
 
