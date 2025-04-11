@@ -95,8 +95,8 @@ public class SkillChecker : MonoBehaviour
 
         }
 
-
         isRunning = false;
+
     }
 
 }
