@@ -9,7 +9,7 @@ using TMPro;
 
 public class BoneGiver : MonoBehaviour
 {
-    public GameObject[] bonePrefabs;
+    public GameObject[] bonePrehabs;
     public Transform spawnPoint;
     public TMP_Text spawnText;
     public Vector3 spawnAreaSize = new Vector3(2f, 0f, 2f); 
@@ -38,16 +38,11 @@ public class BoneGiver : MonoBehaviour
     }
     void SpawnBones()
     {
-        if (bonePrefabs.Length == 0 || spawnPoint == null)
+        if (bonePrehabs.Length == 0 || spawnPoint == null)
             return;
-<<<<<<< HEAD
-        int index = Random.Range(0, bonePrefabs.Length);
-        GameObject randomBone = bonePrefabs[index];
-=======
 
         int index = Random.Range(0, bonePrehabs.Length);
         GameObject randomBone = bonePrehabs[index];
->>>>>>> origin/main
 
         Vector3 randomOffset = new Vector3(
             Random.Range(-spawnAreaSize.x / 2f, spawnAreaSize.x / 2f),
@@ -59,6 +54,7 @@ public class BoneGiver : MonoBehaviour
 
         Instantiate(randomBone, spawnPosition, Quaternion.identity);
     }
+
 
 
 
