@@ -27,15 +27,16 @@ public class BoneDetector : MonoBehaviour
             int skullCount = CountTaggedParts("skull");
 
             // not the final way the stats should be counted but its a start
-            speed = baseSpeed + footCount * footSpeedBonus;
-            strength = baseStrength + handCount * handStrengthBonus;
-            mental = baseMental + skullCount * skullMentalBonus;
+            speed = footCount;
+            strength = handCount;
+            mental =skullCount;
 
             Debug.Log($"foots: {footCount} -> speed: {speed}");
             Debug.Log($"hands: {handCount} -> strength: {strength}");
             Debug.Log($"skulls: {skullCount} -> mental: {mental}");
         }
     }
+
 
     int CountTaggedParts(string tag)
     {
