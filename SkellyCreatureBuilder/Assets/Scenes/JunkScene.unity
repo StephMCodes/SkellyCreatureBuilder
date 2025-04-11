@@ -542,12 +542,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonePrehabs:
-  - {fileID: 8739554569832216241, guid: 66d1861a74e13b14db348127ca2d9b2b, type: 3}
-  - {fileID: 8739554569832216241, guid: 7ba25358cb71fac4197fce3213e7712d, type: 3}
-  - {fileID: 8739554569832216241, guid: 4c29b84b049d17b46883a63d3a5078ad, type: 3}
-  - {fileID: 8739554569832216241, guid: 6676d7726b5fa1e4189f463b8dd38be7, type: 3}
+  - {fileID: 8739554569832216241, guid: f4c7e8f6a99010d4ab077c9bca0c3bd8, type: 3}
+  - {fileID: 8739554569832216241, guid: aab070e8017420046ae39306b45ef0ba, type: 3}
+  - {fileID: 8739554569832216241, guid: efea599519cd75e43bf85eb82556775b, type: 3}
+  - {fileID: 8739554569832216241, guid: 69b7b9dacf3f3a44dbb09c0029f68bce, type: 3}
   spawnPoint: {fileID: 350187330}
   spawnText: {fileID: 872999319}
+  spawnAreaSize: {x: 2, y: 0, z: 2}
 --- !u!4 &1147065925
 Transform:
   m_ObjectHideFlags: 0
