@@ -12,7 +12,8 @@ public class BoneGiver : MonoBehaviour
     public GameObject[] bonePrehabs;
     public Transform spawnPoint;
     public TMP_Text spawnText;
-    public Vector3 spawnAreaSize = new Vector3(2f, 0f, 2f); 
+    public Vector3 spawnAreaSize = new Vector3(2f, 0f, 2f);
+    public Button takeBonesButton;
 
 
     void Start()
@@ -34,6 +35,10 @@ public class BoneGiver : MonoBehaviour
         {
             SpawnBones();
         }
+        if (takeBonesButton != null)
+        {
+            takeBonesButton.interactable = false;
+        }
 
     }
     void SpawnBones()
@@ -54,6 +59,7 @@ public class BoneGiver : MonoBehaviour
 
         Instantiate(randomBone, spawnPosition, Quaternion.identity);
     }
+
 
 
 

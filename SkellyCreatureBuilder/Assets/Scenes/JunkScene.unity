@@ -435,7 +435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click on Take Bones button to get bones!
+  m_text: Click the Take Bones button to get bones!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
   m_sharedMaterial: {fileID: 8992645588986312400, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
@@ -549,6 +549,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 350187330}
   spawnText: {fileID: 872999319}
   spawnAreaSize: {x: 2, y: 0, z: 2}
+  takeBonesButton: {fileID: 812135734}
 --- !u!4 &1147065925
 Transform:
   m_ObjectHideFlags: 0
