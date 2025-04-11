@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
+  m_Name: Intro7
+  m_EditorClassIdentifier: 
+  dialogue:
+  - For this, they cast me aside, stuck with all the lower souls of the Void, who
+    have lost all respect for me.
+  - I had to start everything from scratch, creating my chimeras using only the scraps
+    the other gods throw away into the depths.
+  responses: []
