@@ -781,6 +781,10 @@ MonoBehaviour:
   timerText: {fileID: 2110416026}
   bonusText: {fileID: 1161134434}
   targetScoreText: {fileID: 1165214411}
+  audioSource: {fileID: 1380757837}
+  witchLaugh: {fileID: 8300000, guid: be02b259705516a42ae4472601962e1d, type: 3}
+  whistle: {fileID: 8300000, guid: c31ea741eb0eed740934ddfc110606a6, type: 3}
+  winSfx: {fileID: 8300000, guid: 5746343cb61f91948923fd51ae07f15d, type: 3}
   winPanel: {fileID: 178530602}
   losePanel: {fileID: 748384510}
   gameDuration: 20
@@ -822,24 +826,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543d48aec2ca8224a81bc1d108adf292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: e831d65385084804088c281d6a715a7f, type: 2}
+  dialogueObject: {fileID: 11400000, guid: 1220e7d98fe24e345ae9959c20a271e8, type: 2}
   events:
-  - name: Let's do it!
+  - name: Get, set... GO!
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 392528215}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 520664112}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
@@ -851,6 +843,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 392528215}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &392528217
 MonoBehaviour:
@@ -3438,10 +3442,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380757835}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 32fd6a16717ab7f4cb094491a597ec6d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.14
   m_Pitch: 1

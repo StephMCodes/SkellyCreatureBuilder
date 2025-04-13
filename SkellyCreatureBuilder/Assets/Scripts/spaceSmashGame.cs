@@ -12,6 +12,14 @@ public class spaceSmashGame : MonoBehaviour
     public TextMeshProUGUI bonusText;
     public TextMeshProUGUI targetScoreText;
 
+    [Header("SFX")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip witchLaugh;
+    [SerializeField] private AudioClip whistle;
+    //[SerializeField] private AudioClip step;
+    //[SerializeField] private AudioClip bonecrack;
+    [SerializeField] private AudioClip winSfx;
+
     [Header("Endgame Panels")]
     public GameObject winPanel;
     public GameObject losePanel;
@@ -37,6 +45,14 @@ private float flashTimer = 0f;
     // Bone bonus
     private int legBoneBonus = 0;
     private bool bonesDetected = false;
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
 
     void Start()
     {
@@ -76,6 +92,8 @@ private float flashTimer = 0f;
 
             Debug.Log("No leg bones detected — bonus disabled.");
         }
+
+        PlaySound(whistle);
     }
 
     void Update()
@@ -96,6 +114,7 @@ private float flashTimer = 0f;
         // smash space 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //PlaySound(step);
             score += 1 + (bonesDetected ? legBoneBonus : 0);
             UpdateUI();
 
@@ -135,11 +154,13 @@ private float flashTimer = 0f;
         if (didWin)
         {
             Debug.Log("You Win!");
+            PlaySound(winSfx);
             if (winPanel != null) winPanel.SetActive(true);
         }
         else
         {
             Debug.Log("You Lose.");
+            PlaySound(witchLaugh);
             if (losePanel != null) losePanel.SetActive(true);
         }
     }

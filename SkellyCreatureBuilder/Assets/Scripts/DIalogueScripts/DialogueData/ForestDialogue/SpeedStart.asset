@@ -21,5 +21,5 @@ MonoBehaviour:
   - To enpower my chimera to win the race, I must mash the space button as much as
     possible.
   responses:
-  - responseText: On your marks... get set... GO!
+  - responseText: Get, set... GO!
     dialogueObject: {fileID: 0}
