@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
+  m_Name: Outro2
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\u201CYou\u2019ve really made quite the ruckus down there.\u201D\r"
+  - "\r\u201CWe never expected such creativity from you. It's something to think
+    about. Still, you wouldn't have been able to make anything without our scraps,
+    of course.\u201D\r"
+  - "\r\u201CNo matter. The Order could use your talents. We quite like your ideas,
+    but ideas in the wrong hands can create\u2026 unnecessary chaos.\u201D"
+  - "\r\u201CWord is that even lower spirits have started to create chimeras now.
+    Unacceptable: they're not like us. We will put an end to that together.\u201D\r"
+  - "\r\u201CCreation belongs in the hands of the worthy. That is the law.\u201D\r\n\u201CYou
+    may return to us, where you belong. As long as you stay in line, as we\u2019re
+    sure you understand.\u201D\r"
+  - "\r\u201CYou have been far away from us for too long: have you learned your lesson?
+    Are you ready to weave heavens with us again, as our fellow? Have you had your
+    fun?\u201D\r\n\r"
+  responses:
+  - responseText: I belong here.
+    dialogueObject: {fileID: 11400000, guid: b75cd01f5211d4743924ea429c7d5763, type: 2}
+  - responseText: I'm out.
+    dialogueObject: {fileID: 11400000, guid: 972fc6d7c14a9b645a682056d0f9add4, type: 2}
