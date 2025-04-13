@@ -10,7 +10,11 @@ public class spaceSmashGame : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI bonusText;
-    public GameObject tutorialPanel;
+    public TextMeshProUGUI targetScoreText;
+
+    [Header("Endgame Panels")]
+    public GameObject winPanel;
+    public GameObject losePanel;
 
     [Header("Game Settings")]
     public float gameDuration = 20f;
@@ -22,14 +26,27 @@ public class spaceSmashGame : MonoBehaviour
     private int score = 0;
     private float timer;
     private bool gameRunning = false;
+    private int targetScore;
 
     void Start()
     {
+        score = 0;
         timer = gameDuration;
         gameRunning = true;
-        score = 0;
+
+        //randomizes the win number
+        targetScore = Random.Range(120, 151); 
         UpdateUI();
         UpdateBonusUI();
+
+        if (targetScoreText != null)
+            targetScoreText.text = $"Target: {targetScore}";
+
+        if (winPanel != null)
+            winPanel.SetActive(false);
+
+        if (losePanel != null)
+            losePanel.SetActive(false);
     }
 
     void Update()
@@ -44,24 +61,25 @@ public class spaceSmashGame : MonoBehaviour
             EndGame();
         }
 
+        timerText.text = "Time: " + timer.ToString("F2");
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             score += hasBonus ? bonusMultiplier : 1;
             UpdateUI();
         }
 
-        if (Input.GetKeyDown(KeyCode.B)) // Optional toggle for testing
+        if (Input.GetKeyDown(KeyCode.B))
         {
             hasBonus = !hasBonus;
             UpdateBonusUI();
         }
-
-        timerText.text = "Time: " + timer.ToString("F2");
     }
 
     void UpdateUI()
     {
-        scoreText.text = "Score: " + score.ToString();
+        if (scoreText != null)
+            scoreText.text = "Score: " + score.ToString();
     }
 
     void UpdateBonusUI()
@@ -73,6 +91,18 @@ public class spaceSmashGame : MonoBehaviour
     void EndGame()
     {
         timerText.text = "Time's up!";
-        Debug.Log("Final Score: " + score);
+
+        bool didWin = score >= targetScore;
+
+        if (didWin)
+        {
+            Debug.Log("You Win!");
+            if (winPanel != null) winPanel.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("You Lose.");
+            if (losePanel != null) losePanel.SetActive(true);
+        }
     }
 }
