@@ -66,12 +66,12 @@ public class skillCheckMinigame : MonoBehaviour
             successCount++;
             Debug.Log("SUCCESS");
             PlaySound(ding);
-            PlaySound(bonecrack);
+            PlaySound(punch);
         }
         else
         {
             Debug.Log("MISS");
-            PlaySound(punch);
+            PlaySound(bonecrack);
         }
 
         UpdateSuccessText();
