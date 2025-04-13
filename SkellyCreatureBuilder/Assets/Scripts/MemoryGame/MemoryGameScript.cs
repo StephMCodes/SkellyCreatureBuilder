@@ -40,7 +40,8 @@ public class MemoryGameScript : MonoBehaviour
     bool won = false;
 
     Color32 red = new Color32(255, 39, 0, 255);
-    Color32 green = new Color32(4, 204, 0, 255);
+    //Color32 green = new Color32(4, 204, 0, 255);
+    Color32 blue = new Color32(152, 173, 255, 255);
     Color32 invisible = new Color32(4, 204, 0, 0);
     Color32 white = new Color32(255, 255, 255, 255);
 
@@ -126,13 +127,13 @@ public class MemoryGameScript : MonoBehaviour
                 lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = invisible;
                 yield return new WaitForSeconds(lightSpeed);
                 //makes it green
-                lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = green;
+                lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = blue;
                 audioSource.PlayOneShot(click2);
                 yield return new WaitForSeconds(lightSpeed);
                 //invis again
                 lightArray[lightOrder[i]].GetComponent<SpriteRenderer>().color = invisible;
                 //update row on left
-                rowLights[i].GetComponent<SpriteRenderer>().color = green;
+                rowLights[i].GetComponent<SpriteRenderer>().color = blue;
             }
         }
         //now the player can click after we saw the lights flash
@@ -192,7 +193,7 @@ public class MemoryGameScript : MonoBehaviour
         {
             Debug.Log("beat the game");
             won = true;
-            StartCoroutine(ColorBlink(green));
+            StartCoroutine(ColorBlink(blue));
         }
     }
 
