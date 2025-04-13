@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: FightStart
   m_EditorClassIdentifier: 
   dialogue:
-  - Upon arrival, you spot a cackling witch approaching you. In front of her lies
-    some sort of strength test.
-  - She proposes a challenge of Strength between your creations. A strong arm is
-    important!
-  - Who will rise to the occasion and who will crumble into bonepowder? Do you send
-    your creature to fight?
+  - 'I hear her before I see her amidst the fog: a cackling crone. In front of her
+    lies some sort of strength test.'
+  - She proposes a challenge of Strength between our creations. A strong arm is important!
+    Every hit must be timed well.
+  - '"Nyeheheh! Who will rise to the occasion and who will crumble into bonepowder?
+    Do you send your creature to fight?"'
+  - The witch laughs at me. Clearly, she doesn't know who she's talking to.
   responses:
   - responseText: Let's do it!
     dialogueObject: {fileID: 0}

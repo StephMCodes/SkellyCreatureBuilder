@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: MemoryStart
   m_EditorClassIdentifier: 
   dialogue:
-  - Upon arrival, you spot a haggard witch approaching you. In front of her lies
-    some sort of card game.
-  - She proposes a challenge of Memory between your creations. A keen eye is important!
-  - Are you ready?
+  - Upon arrival, I spot a haggard hag approaching me. In front of her lies some
+    sort of card game.
+  - She proposes a challenge of Memory between our creations. A keen eye is important!
+  - '"Are you ready?"'
   responses:
-  - responseText: Begin!
+  - responseText: Born ready!
     dialogueObject: {fileID: 0}
