@@ -24,6 +24,7 @@ public class skillCheckMinigame : MonoBehaviour
     [SerializeField] private AudioClip punch;
     [SerializeField] private AudioClip bonecrack;
     [SerializeField] private AudioClip winSfx;
+    [SerializeField] private GameObject MusicPlayer;
 
     [Header("End Panels")]
     public GameObject winPanel;
@@ -108,11 +109,13 @@ public class skillCheckMinigame : MonoBehaviour
         if (successCount == maxChances)
         {
             if (winPanel != null) winPanel.SetActive(true);
+            MusicPlayer.SetActive(false);
             PlaySound(winSfx);
         }
         else
         {
             if (losePanel != null) losePanel.SetActive(true);
+            MusicPlayer.SetActive(false);
             PlaySound(witchLaugh);
         }
     }

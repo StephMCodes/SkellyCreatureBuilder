@@ -27,8 +27,4 @@ MonoBehaviour:
   - "\r\u201CYou have been far away from us for too long: have you learned your lesson?
     Are you ready to weave heavens with us again, as our fellow? Have you had your
     fun?\u201D\r\n\r"
-  responses:
-  - responseText: I belong here.
-    dialogueObject: {fileID: 11400000, guid: b75cd01f5211d4743924ea429c7d5763, type: 2}
-  - responseText: I'm out.
-    dialogueObject: {fileID: 11400000, guid: 972fc6d7c14a9b645a682056d0f9add4, type: 2}
+  responses: []

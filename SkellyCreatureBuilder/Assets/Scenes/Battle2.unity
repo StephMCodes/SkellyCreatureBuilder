@@ -804,7 +804,7 @@ MonoBehaviour:
   losePanel: {fileID: 748384510}
   gameDuration: 20
   flashImage: {fileID: 1333420018}
-  flashColorStart: {r: 0, g: 0, b: 0.545, a: 1}
+  flashColorStart: {r: 1, g: 0.9554456, b: 0, a: 1}
   flashColorEnd: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
   pulseSpeed: 100
