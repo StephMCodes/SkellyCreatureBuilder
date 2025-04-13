@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - They cannot ever fight, only pit their creatures against one another in silly
-    contests to win bets. They cannot ever raise a hand to one another. That is the
-    law.
+    contests to win bets. They cannot ever raise a hand to one another.
+  - That is the law.
   responses: []
