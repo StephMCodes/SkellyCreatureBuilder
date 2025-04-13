@@ -18,7 +18,17 @@ public class spaceSmashGame : MonoBehaviour
 
     [Header("Game Settings")]
     public float gameDuration = 20f;
-   
+
+    [Header("SpaceBar Flash")]
+  public RawImage flashImage;
+public Color flashColorStart = new Color(0f, 0f, 0.545f); // Deep Blue (#00008B)
+public Color flashColorEnd = Color.white;
+public float flashDuration = 0.5f;
+public float pulseSpeed = 5f;
+
+private bool isFlashing = false;
+private float flashTimer = 0f;
+
     private int score = 0;
     private float timer;
     private bool gameRunning = false;
@@ -88,6 +98,26 @@ public class spaceSmashGame : MonoBehaviour
         {
             score += 1 + (bonesDetected ? legBoneBonus : 0);
             UpdateUI();
+
+            if (flashImage != null)
+            {
+                isFlashing = true;
+                flashTimer = 0f;
+            }
+
+            if (isFlashing && flashImage != null)
+            {
+                flashTimer += Time.deltaTime;
+
+                float t = Mathf.PingPong(flashTimer * pulseSpeed, 1f);
+                flashImage.color = Color.Lerp(flashColorStart, flashColorEnd, t);
+
+                if (flashTimer >= flashDuration)
+                {
+                    isFlashing = false;
+                    flashImage.color = flashColorStart; // Reset to deep blue
+                }
+            }
         }
     }
 
