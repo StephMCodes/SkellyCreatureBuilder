@@ -47,7 +47,7 @@ public class AutoDialogueUI : MonoBehaviour
         CloseDialogueBox(); //clean up
 
         //method to make it appear on screen
-        //ShowDialogue(testDialogue); //passing dialogue object
+        ShowDialogue(testDialogue); //passing dialogue object
 
         //Interact(player);
 
