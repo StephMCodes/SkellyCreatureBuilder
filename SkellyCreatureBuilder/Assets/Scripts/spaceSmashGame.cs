@@ -14,8 +14,10 @@ public class spaceSmashGame : MonoBehaviour
 
     [Header("SFX")]
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSourceSteps;
     [SerializeField] private AudioClip witchLaugh;
     [SerializeField] private AudioClip whistle;
+    [SerializeField] private AudioClip[] steps;
     //[SerializeField] private AudioClip step;
     //[SerializeField] private AudioClip bonecrack;
     [SerializeField] private AudioClip winSfx;
@@ -54,8 +56,16 @@ private float flashTimer = 0f;
         }
     }
 
+    void Steps()
+    {
+        AudioClip step = steps[UnityEngine.Random.Range(0, steps.Length)];
+        audioSourceSteps.PlayOneShot(step);
+    }
+
     void Start()
     {
+        audioSourceSteps = GetComponent<AudioSource>();
+        
         score = 0;
         timer = gameDuration;
         gameRunning = true;
@@ -114,6 +124,7 @@ private float flashTimer = 0f;
         // smash space 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Steps();
             //PlaySound(step);
             score += 1 + (bonesDetected ? legBoneBonus : 0);
             UpdateUI();

@@ -739,6 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359435887}
   - component: {fileID: 359435888}
+  - component: {fileID: 359435889}
   m_Layer: 5
   m_Name: Speed Game Manager
   m_TagString: Untagged
@@ -782,8 +783,22 @@ MonoBehaviour:
   bonusText: {fileID: 1161134434}
   targetScoreText: {fileID: 1165214411}
   audioSource: {fileID: 1380757837}
+  audioSourceSteps: {fileID: 0}
   witchLaugh: {fileID: 8300000, guid: be02b259705516a42ae4472601962e1d, type: 3}
   whistle: {fileID: 8300000, guid: c31ea741eb0eed740934ddfc110606a6, type: 3}
+  steps:
+  - {fileID: 8300000, guid: b106e18c961a6f34d8e987f63e88dc13, type: 3}
+  - {fileID: 8300000, guid: 61023b1787b2c8c47b1b47648e1a4dd1, type: 3}
+  - {fileID: 8300000, guid: 3315d0ab87eae68449a152fe03d01201, type: 3}
+  - {fileID: 8300000, guid: e2c7af34919b99044a0cf8ef9a2b2133, type: 3}
+  - {fileID: 8300000, guid: 4a9a139c4a4b128439de381d664922ac, type: 3}
+  - {fileID: 8300000, guid: c0071dfa484a87e4aa77b337344c23ec, type: 3}
+  - {fileID: 8300000, guid: fceb37aec8d20a04fbd587ca023326f8, type: 3}
+  - {fileID: 8300000, guid: 68fb43271a7910c4d9f35a2f13e3316a, type: 3}
+  - {fileID: 8300000, guid: 0e0d81855f2cdc945a9fbbfda980d2a8, type: 3}
+  - {fileID: 8300000, guid: 20b83525f2e17da469501d1feaae20fc, type: 3}
+  - {fileID: 8300000, guid: 9e024e0d14c708540affdab1917a6d0b, type: 3}
+  - {fileID: 8300000, guid: a4d5e99325d53ec45a679574007960d7, type: 3}
   winSfx: {fileID: 8300000, guid: 5746343cb61f91948923fd51ae07f15d, type: 3}
   winPanel: {fileID: 178530602}
   losePanel: {fileID: 748384510}
@@ -793,6 +808,102 @@ MonoBehaviour:
   flashColorEnd: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
   pulseSpeed: 100
+--- !u!82 &359435889
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359435886}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &392528215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1124,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b042c997ae8af6b48a6df208b1160cb3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.7830188, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3378,7 +3489,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 486c4b7cc29a75d43b5254a4586ff9b2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.99942094, b: 0.5943396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
