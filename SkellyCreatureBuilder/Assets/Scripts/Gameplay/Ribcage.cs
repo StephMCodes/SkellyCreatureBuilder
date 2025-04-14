@@ -7,10 +7,26 @@ public class Ribcage : MonoBehaviour
 
     public Transform[] attachmentPoints; // attach EMPTY game objects here for sockets
     private bool[] socketUsed;
+    private LinkedList<Transform> socketList = new LinkedList<Transform>();
+
+
 
     void Start()
     {
-        socketUsed = new bool[attachmentPoints.Length];
+        foreach (var socket in attachmentPoints)
+        {
+            socketList.AddLast(socket);
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Transform randomSocket = GetRandomSocket();
+            if (randomSocket != null)
+                StartCoroutine(WiggleOneSocket(randomSocket));
+        }
     }
 
     public Transform GetClosestSocket(Vector3 position)
@@ -29,6 +45,20 @@ public class Ribcage : MonoBehaviour
         }
 
         return closestSocket;
+    }
+
+
+    Transform GetRandomSocket()
+    {
+        if (socketList.Count == 0) return null;
+
+        int index = Random.Range(0, socketList.Count);
+        var current = socketList.First;
+
+        for (int i = 0; i < index; i++)
+            current = current.Next;
+
+        return current.Value;
     }
 
 
@@ -64,6 +94,25 @@ public class Ribcage : MonoBehaviour
 
             yield return null; // required for couroutine 
         }
+    }
+
+    IEnumerator WiggleOneSocket(Transform socket)
+    {
+        float wiggleSpeed = 12f;
+        float wiggleIntensity = 50f;
+        float duration = 2f;
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            float angle = Mathf.Sin(Time.time * wiggleSpeed) * wiggleIntensity;
+            socket.localRotation = Quaternion.Euler(0f, 0f, angle);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        socket.localRotation = Quaternion.identity;
     }
 }
 
