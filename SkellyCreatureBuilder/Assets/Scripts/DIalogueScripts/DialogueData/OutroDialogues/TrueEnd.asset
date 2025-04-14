@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
+  m_Name: TrueEnd
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "No. You\u2019re not going to control me anymore. You don't get to choose who
+    can create what.\r\r\n"
+  - "I'm going back to the Depths. It\u2019s not as if you can stop me."
+  - "\u201CYou want to leave? We will make you pay for it.\u201D"
+  - 'Everyone will be making chimeras now: your reign is coming to an end. Feel free
+    to try and copy our ideas. But we don''t need you.
+
+'
+  - "\u201CYou know you will come crawling back.\u201D"
+  - We'll see about that.
+  responses: []

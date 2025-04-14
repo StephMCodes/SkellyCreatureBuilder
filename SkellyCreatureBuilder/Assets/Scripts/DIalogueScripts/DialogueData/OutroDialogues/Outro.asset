@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
+  m_Name: Outro
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "It\u2019s finally happening. I won't lie and say I didn't expect to make it
+    this far, though.\r"
+  - "\rAs they take me back upwards, back where I belong and have belonged all this
+    time, I can't help but feel a twinge of an emotion I don't understand.\r\r\n"
+  - "\rNo use dwelling on it. It\u2019s finally time for the Order to assemble."
+  responses: []

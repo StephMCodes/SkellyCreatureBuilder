@@ -29,7 +29,8 @@ public class AutoDialogueActivator : MonoBehaviour, IInteractable
     private void Start()
     {
         if (player.DialogueUI.IsOpen == false)
-            Interact(player);
+            player.DialogueUI.ShowDialogue(dialogueObject);
+        //Interact(player);
     }
     void Update()
     {
