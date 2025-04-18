@@ -21,6 +21,7 @@ public class spaceSmashGame : MonoBehaviour
     //[SerializeField] private AudioClip step;
     //[SerializeField] private AudioClip bonecrack;
     [SerializeField] private AudioClip winSfx;
+    [SerializeField] private AudioSource musicPlayer;
 
     [Header("Endgame Panels")]
     public GameObject winPanel;
@@ -165,12 +166,14 @@ private float flashTimer = 0f;
         if (didWin)
         {
             Debug.Log("You Win!");
+            musicPlayer.gameObject.SetActive(false);
             PlaySound(winSfx);
             if (winPanel != null) winPanel.SetActive(true);
         }
         else
         {
             Debug.Log("You Lose.");
+            musicPlayer.gameObject.SetActive(false);
             PlaySound(witchLaugh);
             if (losePanel != null) losePanel.SetActive(true);
         }
