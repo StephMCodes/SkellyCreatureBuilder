@@ -1690,16 +1690,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805452987}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f41717dfd3b683944b219c63754df49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNames:
-  - Battle2
-  - Trivia
-  - Scene3
-  - Scene4
 --- !u!4 &1805452989
 Transform:
   m_ObjectHideFlags: 0

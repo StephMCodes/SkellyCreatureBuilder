@@ -33,7 +33,9 @@ public class DialogueUI : MonoBehaviour
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
-
+        if (textLabel == null) Debug.LogError("TextLabel is NULL!");
+        if (typewriterEffect == null) Debug.LogError("TypewriterEffect is NULL!");
+        if (responseHandler == null) Debug.LogError("ResponseHandler is NULL!");
         CloseDialogueBox(); //clean up
 
         //method to make it appear on screen
