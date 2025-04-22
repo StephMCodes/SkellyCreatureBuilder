@@ -784,7 +784,7 @@ MonoBehaviour:
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1363858527}
+        - m_Target: {fileID: 1274087194}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -1102,6 +1102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98560e001efeed4d8eaec952e737f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1274087194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7013583839565840295, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+  m_PrefabInstance: {fileID: 7814616879821190260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1339272651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,7 +2387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013583839565840295, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7318482533101953369, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_Texture
