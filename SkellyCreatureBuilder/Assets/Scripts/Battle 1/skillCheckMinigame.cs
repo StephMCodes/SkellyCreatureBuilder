@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+
 public class skillCheckMinigame : MonoBehaviour
 {
+
     [Header("UI Elements")]
     public RectTransform rotatingZone;
     public TextMeshProUGUI successText;
@@ -37,6 +39,14 @@ public class skillCheckMinigame : MonoBehaviour
 
     void Start()
     {
+        // arm count from Bone detector
+        float armCount = BoneDetector.strength;
+
+        // Sets rotation speed 1 arm = 450 an extra arm -100
+        rotationSpeed = Mathf.Max(50f, 450f - (Mathf.Max(armCount - 1, 0) * 100f)); // Prevents negative speed
+
+        Debug.Log($"Arm count: {armCount}, Rotation Speed: {rotationSpeed}");
+
         UpdateSuccessText();
         ResetZoneAngle();
 
