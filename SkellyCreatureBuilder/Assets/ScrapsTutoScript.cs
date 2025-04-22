@@ -28,7 +28,7 @@ public class ScrapsTutoScript : MonoBehaviour
     {
         if (player.DialogueUI.IsOpen == false)
             Interact(player);
-        Ascend.interactable = true;
+        Ascend.gameObject.SetActive(true);  
     }
 
     // Update is called once per frame
