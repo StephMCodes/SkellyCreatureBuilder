@@ -157,14 +157,14 @@ public class MemoryGameScript : MonoBehaviour
         }
         else
         {
-            //take a skull away — this now affects BoneDetector.mental directly
+            //take a skull away this affects bonus
             BoneDetector.mental--;
             Debug.Log("failed. skull count: " + BoneDetector.mental);
             audioSource.PlayOneShot(boneBreak);
             won = false;
             passed = false;
 
-            // Update the skull UI using BoneDetector.mental
+            // Update the skull UI 
             if (skullHealthUI != null)
                 skullHealthUI.UpdateSkullUI((int)BoneDetector.mental);
 
