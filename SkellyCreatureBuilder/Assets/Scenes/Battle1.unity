@@ -1605,7 +1605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41717dfd3b683944b219c63754df49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Base
+  sceneNames:
+  - Battle2
+  - Trivia
+  - Scene3
+  - Scene4
 --- !u!4 &1805452989
 Transform:
   m_ObjectHideFlags: 0
@@ -2390,7 +2394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394224695331964858, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7562642419476370572, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: MusicPlayer
