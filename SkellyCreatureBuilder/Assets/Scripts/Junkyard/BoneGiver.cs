@@ -20,7 +20,7 @@ public class BoneGiver : MonoBehaviour
     {
         if (spawnText != null)
         {
-            spawnText.text = "Click the Take Bones button to get bones!";
+            spawnText.text = "Click the button below to retrieve bones!";
          }
     }
     public void GiveBones()

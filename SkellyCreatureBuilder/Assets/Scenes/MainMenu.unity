@@ -2802,7 +2802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6198bf57a9ac94a8558bb23147d51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: GameScene
+  levelToLoad: IntroScene
 --- !u!4 &1618107210
 Transform:
   m_ObjectHideFlags: 0
