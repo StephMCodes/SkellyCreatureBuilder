@@ -32,6 +32,29 @@ public class InventoryManager : MonoBehaviour
         {
             AddItem(item);
         }
+
+        foreach (var bonePrefab in BoneTransfer.bonesToTransfer)
+        {
+            if (bonePrefab == null) continue;
+
+            ItemData newItem = new ItemData();
+            newItem.prefabToSpawn = bonePrefab;
+
+
+            SpriteRenderer sr = bonePrefab.GetComponent<SpriteRenderer>();
+            if (sr != null)
+                newItem.itemSprite = sr.sprite;
+            else
+                Debug.LogWarning("Bone prefab " + bonePrefab.name + " has no SpriteRenderer!");
+
+            AddItem(newItem);
+        }
+
+        // clear transferred bones after taking them
+        BoneTransfer.bonesToTransfer.Clear();
+
+
+
     }
 
     void AddItem(ItemData item)

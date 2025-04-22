@@ -58,6 +58,9 @@ public class BoneGiver : MonoBehaviour
         Vector3 spawnPosition = spawnPoint.position + randomOffset;
 
         Instantiate(randomBone, spawnPosition, Quaternion.identity);
+
+        GameObject spawnedBone = Instantiate(randomBone, spawnPosition, Quaternion.identity);
+        BoneTransfer.bonesToTransfer.Add(randomBone);
     }
 
 
