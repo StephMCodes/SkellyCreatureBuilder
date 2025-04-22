@@ -26,4 +26,4 @@ MonoBehaviour:
     but they serve their purpose.
   responses:
   - responseText: Let's do this.
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: a1168b199de3ca24a927f4aa2dff3b2c, type: 2}

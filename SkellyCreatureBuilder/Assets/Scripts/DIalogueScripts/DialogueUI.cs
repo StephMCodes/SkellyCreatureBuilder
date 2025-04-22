@@ -97,8 +97,10 @@ public class DialogueUI : MonoBehaviour
         {
             responseHandler.ShowResponses(dialogueObject.Responses);
         }
+        
         else
         {
+            //Debug.LogError("Either responseHandler or dialogueObject.Responses is null!");
             CloseDialogueBox();
         }
 

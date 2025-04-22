@@ -22,4 +22,4 @@ MonoBehaviour:
   - The witch laughs at me. Clearly, she doesn't know who she's talking to.
   responses:
   - responseText: Let's do it!
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: a1168b199de3ca24a927f4aa2dff3b2c, type: 2}
