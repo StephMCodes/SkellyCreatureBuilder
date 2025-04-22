@@ -10,9 +10,9 @@ public class InventoryManager : MonoBehaviour
     {
         public Sprite itemSprite;
         public GameObject prefabToSpawn;
-
+        
         [HideInInspector]
-        public GameObject uiObject; 
+        public GameObject uiObject; // created at runtime
     }
 
     public List<ItemData> itemsToAdd = new List<ItemData>();
@@ -45,7 +45,7 @@ public class InventoryManager : MonoBehaviour
         GameObject newUI = Instantiate(itemUIPrefab, hotbar);
         newUI.GetComponent<Image>().sprite = item.itemSprite;
 
-        item.uiObject = newUI; 
+        item.uiObject = newUI; // link the UI object to the item
         inventoryItems.AddLast(item);
     }
 
