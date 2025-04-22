@@ -13,6 +13,7 @@ public class ResponseHandler : MonoBehaviour
 
     //reference to dialogue ui script and response events script
     private DialogueUI dialogueUI;
+    private ResponseHandler responseHandler;
     private ResponseEvent[] responseEvents;
 
     //list to track created buttons (for their later removal)
@@ -20,6 +21,11 @@ public class ResponseHandler : MonoBehaviour
     private void Start()
     {
         dialogueUI = GetComponent<DialogueUI>();
+        responseHandler = GetComponent<ResponseHandler>();
+        if (responseHandler == null)
+        {
+            Debug.Log("ResponseHandler is null when trying to show responses!");
+        }
     }
     public void AddResponseEvents(ResponseEvent[] responseEvents)
     {
