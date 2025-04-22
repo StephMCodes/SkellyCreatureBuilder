@@ -24,5 +24,6 @@ MonoBehaviour:
   - To face the witches, I put my creatures together and weave a facsimile of life
     within them. They never last long, condemning me to eternally make new ones,
     but they serve their purpose.
-  - Let's do this.
-  responses: []
+  responses:
+  - responseText: Let's do this.
+    dialogueObject: {fileID: 0}

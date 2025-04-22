@@ -551,7 +551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2768002359645394736, guid: 0d9154216c7e0c849afad13609753af8, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4174124362105685287, guid: 0d9154216c7e0c849afad13609753af8, type: 3}
       propertyPath: m_Enabled
@@ -726,13 +726,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543d48aec2ca8224a81bc1d108adf292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: e831d65385084804088c281d6a715a7f, type: 2}
+  dialogueObject: {fileID: 11400000, guid: 1a8ca279908a5e94d81917e482636830, type: 2}
   events:
-  - name: Begin!
+  - name: Let's do this.
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 660694524}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -744,9 +744,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: 98711871}
+          m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+          m_MethodName: set_interactable
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -754,7 +754,19 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1033797117}
+          m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+          m_MethodName: set_interactable
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!114 &338237183
 MonoBehaviour:
@@ -778,7 +790,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 338237178}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338237179}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b98560e001efeed4d8eaec952e737f57, type: 3}
   m_Name: 
@@ -1560,6 +1572,8 @@ GameObject:
   - component: {fileID: 660694528}
   - component: {fileID: 660694527}
   - component: {fileID: 660694526}
+  - component: {fileID: 660694530}
+  - component: {fileID: 660694529}
   m_Layer: 5
   m_Name: Scraps
   m_TagString: Untagged
@@ -1594,7 +1608,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660694524}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1631,8 +1645,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 338237183}
-        m_TargetAssemblyTypeName: AutoDialogueUI, Assembly-CSharp
+      - m_Target: {fileID: 338237184}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
         m_MethodName: ShowDialogue
         m_Mode: 2
         m_Arguments:
@@ -1693,6 +1707,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660694524}
   m_CullTransparentMesh: 1
+--- !u!114 &660694529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660694524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55c6dc79b590e4418b4c8814b374b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: 590e362df742bb34286753d8fddff36c, type: 2}
+  player: {fileID: 2008984330}
+--- !u!61 &660694530
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660694524}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -8.270878, y: -17.201803}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 35.839996, y: 35.839996}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 72.3812, y: 114.642}
+  m_EdgeRadius: 0
 --- !u!1 &789191160
 GameObject:
   m_ObjectHideFlags: 0
