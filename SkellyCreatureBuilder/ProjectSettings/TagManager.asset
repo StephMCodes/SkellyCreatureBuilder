@@ -7,6 +7,10 @@ TagManager:
   - foot
   - hand
   - skull
+  - RightArmSocket
+  - LeftArmSocket
+  - RightFootSocket
+  - LeftFootSocket
   layers:
   - Default
   - TransparentFX

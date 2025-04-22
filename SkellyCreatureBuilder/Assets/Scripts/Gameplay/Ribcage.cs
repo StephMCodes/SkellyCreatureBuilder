@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ribcage : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Ribcage : MonoBehaviour
     public Transform[] attachmentPoints; // attach EMPTY game objects here for sockets
     private bool[] socketUsed;
     private LinkedList<Transform> socketList = new LinkedList<Transform>();
+    public Button waveButton;
 
 
 
@@ -17,15 +19,25 @@ public class Ribcage : MonoBehaviour
         {
             socketList.AddLast(socket);
         }
+
+        if (waveButton != null)
+        {
+            waveButton.onClick.AddListener(OnWaveButtonClicked);
+        }
     }
 
-    void Update()
+    private void OnWaveButtonClicked()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+
+        Transform rightArmSocket = GameObject.FindGameObjectWithTag("RightArmSocket")?.transform;
+
+        if (rightArmSocket != null)
         {
-            Transform randomSocket = GetRandomSocket();
-            if (randomSocket != null)
-                StartCoroutine(WiggleOneSocket(randomSocket));
+            StartCoroutine(WiggleOneSocket(rightArmSocket));
+        }
+        else
+        {
+            Debug.Log("RightArmSocket not found.");
         }
     }
 

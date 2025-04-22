@@ -788,6 +788,22 @@ PrefabInstance:
       propertyPath: takeBonesButton
       value: 
       objectReference: {fileID: 812135734}
+    - target: {fileID: 7468049101410051757, guid: c924e2e84874f1744a411396413e5676, type: 3}
+      propertyPath: bonePrehabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468049101410051757, guid: c924e2e84874f1744a411396413e5676, type: 3}
+      propertyPath: bonePrehabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8739554569832216241, guid: 69b7b9dacf3f3a44dbb09c0029f68bce, type: 3}
+    - target: {fileID: 7468049101410051757, guid: c924e2e84874f1744a411396413e5676, type: 3}
+      propertyPath: bonePrehabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8739554569832216241, guid: aab070e8017420046ae39306b45ef0ba, type: 3}
+    - target: {fileID: 7468049101410051757, guid: c924e2e84874f1744a411396413e5676, type: 3}
+      propertyPath: bonePrehabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8739554569832216241, guid: efea599519cd75e43bf85eb82556775b, type: 3}
     - target: {fileID: 8743228366206568385, guid: c924e2e84874f1744a411396413e5676, type: 3}
       propertyPath: m_Name
       value: BoneJunkyard
