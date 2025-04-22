@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &39106248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -308,6 +308,8 @@ MonoBehaviour:
   lightOrder: 090000000400000002000000000000000100000001000000010000000400000000000000
   text: {fileID: 1497720104}
   GameStatePanel: {fileID: 238129135}
+  LOSEGameStatePanel: {fileID: 291123576}
+  WINGameStatePanel: {fileID: 128273002}
   MusicPlayer: {fileID: 343110468}
   Tiles: {fileID: 1141861035}
   witchLaugh: {fileID: 8300000, guid: be02b259705516a42ae4472601962e1d, type: 3}
@@ -315,8 +317,6 @@ MonoBehaviour:
   winSfx: {fileID: 8300000, guid: 5746343cb61f91948923fd51ae07f15d, type: 3}
   click: {fileID: 8300000, guid: 02e848fdddcd7bf4e8f6243a125ea04a, type: 3}
   click2: {fileID: 8300000, guid: d3b1b51e65df5f043b7c4ad2afa4185d, type: 3}
-  winPanel: {fileID: 128273002}
-  losePanel: {fileID: 291123576}
   lightSpeed: 0.3
 --- !u!114 &39106250
 MonoBehaviour:
@@ -1727,6 +1727,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1189505104}
     m_Modifications:
+    - target: {fileID: 655169805791086465, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2016857398676062062, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1821,7 +1825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168694044452464096, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_text
-      value: It appears you are missing skill and IQ. Definitetly not the brains
+      value: It appears your creature missing skill and IQ. Definitely not the brains
         of any operation. Your defeat is pitiful and will go down in history books...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5885,7 +5889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1189505101
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,9 @@ public class MemoryGameScript : MonoBehaviour
 
     [SerializeField] TMP_Text text;
     [SerializeField] GameObject GameStatePanel;
+    [SerializeField] GameObject LOSEGameStatePanel;
+    [SerializeField] GameObject WINGameStatePanel;
+
     [SerializeField] GameObject MusicPlayer;
     [SerializeField] GameObject Tiles;
 
@@ -171,8 +174,8 @@ public class MemoryGameScript : MonoBehaviour
                 MusicPlayer.SetActive(false);
                 audioSource.PlayOneShot(witchLaugh);
                 Tiles.SetActive(false);
-                text.SetText("GAME OVER");
-                GameStatePanel.SetActive(true);
+                //text.SetText("GAME OVER");
+                LOSEGameStatePanel.SetActive(true);
                 return; // Stop here
             }
 
@@ -230,8 +233,8 @@ public class MemoryGameScript : MonoBehaviour
             MusicPlayer.SetActive(false);
             audioSource.PlayOneShot(winSfx);
             Tiles.SetActive(false);
-            text.SetText("GAME WON");
-            GameStatePanel.SetActive(true);
+            //text.SetText("GAME WON");
+            WINGameStatePanel.SetActive(true);
         }
 
         EnableInteractableButtons();
