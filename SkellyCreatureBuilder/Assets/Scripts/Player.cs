@@ -25,6 +25,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dialogueUI == null)
+        {
+            Debug.Log("DialogueUI is null in Player script!");
+            return;
+        }
+
         if (dialogueUI.IsOpen) return;
         
         

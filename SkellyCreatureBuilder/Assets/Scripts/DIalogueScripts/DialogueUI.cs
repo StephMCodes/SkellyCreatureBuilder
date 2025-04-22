@@ -33,9 +33,9 @@ public class DialogueUI : MonoBehaviour
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
-        if (textLabel == null) Debug.LogError("TextLabel is NULL!");
-        if (typewriterEffect == null) Debug.LogError("TypewriterEffect is NULL!");
-        if (responseHandler == null) Debug.LogError("ResponseHandler is NULL!");
+        //if (textLabel == null) Debug.LogError("TextLabel is NULL!");
+        //if (typewriterEffect == null) Debug.LogError("TypewriterEffect is NULL!");
+        //if (responseHandler == null) Debug.LogError("ResponseHandler is NULL!");
         CloseDialogueBox(); //clean up
 
         //method to make it appear on screen
@@ -108,9 +108,9 @@ public class DialogueUI : MonoBehaviour
 
     private IEnumerator RunTypingEffect(string dialogue)
     {
-        Debug.Log("Running typing effect...");
-        Debug.Log("TypewriterEffect is: " + typewriterEffect);
-        Debug.Log("TextLabel is: " + textLabel);
+        //Debug.Log("Running typing effect...");
+        //Debug.Log("TypewriterEffect is: " + typewriterEffect);
+       // Debug.Log("TextLabel is: " + textLabel);
 
         typewriterEffect.Run(dialogue, textLabel);
         while (typewriterEffect.IsRunning)
