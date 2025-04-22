@@ -24,6 +24,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle2.unity
     guid: 07405452c37eafa4cbd497baa334cc97
   - enabled: 1
+    path: Assets/Scenes/Battle3.unity
+    guid: 84d3cbbf5729ebf48a0d375e8be082f5
+  - enabled: 1
+    path: Assets/Scenes/TriviaMemory.unity
+    guid: 0bd6af54b548db74dbba40fdde514575
+  - enabled: 1
+    path: Assets/Scenes/TrueFalseMemory.unity
+    guid: 3e61b9e94322ade49bc1c772ab2d5cb7
+  - enabled: 1
     path: Assets/Scenes/JunkScene.unity
     guid: aae77882b99b3d544a3823139b8ef027
   m_configObjects: {}

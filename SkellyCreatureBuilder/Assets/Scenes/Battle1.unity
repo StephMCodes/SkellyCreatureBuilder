@@ -1332,37 +1332,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7394224695331964858, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
   m_PrefabInstance: {fileID: 7814616879821190260}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1378690948
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1378690949}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1378690949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378690948}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1173.7021, y: 566.3269, z: -4.886911}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505661194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,11 +1690,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805452987}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f41717dfd3b683944b219c63754df49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNames:
+  - Battle2
+  - Battle3
+  - TriviaMemory
+  - TrueFalseMemory
 --- !u!4 &1805452989
 Transform:
   m_ObjectHideFlags: 0
@@ -2196,7 +2170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 731365966399434441, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BacktoBase
+      value: LoadRandomScene
       objectReference: {fileID: 0}
     - target: {fileID: 731365966399434441, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2347,6 +2321,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1805452988}
@@ -2355,11 +2333,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BacktoBase
+      value: LoadRandomScene
       objectReference: {fileID: 0}
     - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Battle1Controller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Battle1Controller, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
@@ -2550,4 +2536,3 @@ SceneRoots:
   - {fileID: 379070342}
   - {fileID: 462716388}
   - {fileID: 1645043072}
-  - {fileID: 1378690949}
