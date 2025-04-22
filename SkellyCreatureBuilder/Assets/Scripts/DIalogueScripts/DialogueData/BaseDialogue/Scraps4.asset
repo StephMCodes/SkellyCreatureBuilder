@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
+  m_Name: Scraps4
+  m_EditorClassIdentifier: 
+  dialogue:
+  - '"Boss! Look! They sent someone down to fetch you! I dont think I want to stick
+    around longer...'
+  - A merchant gotta know to keep as many friends as possible. You know, buddy-buddy
+    with authority and all. But you're still my favourite client!
+  - Im off! Good luck! Hope you achieve what you wanted, pal!"
+  responses: []

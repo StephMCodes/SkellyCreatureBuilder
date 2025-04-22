@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ScrapsTuto
   m_EditorClassIdentifier: 
   dialogue:
-  - Hey pal, glad to see you here. You can always get your trash freebies from me!
-    I respect authority, unlike some other souls. Authority feeds me bones!
+  - '"Hey pal, glad to see you here. You can always get your trash freebies from
+    me! I respect authority, unlike some other souls. Authority feeds me bones!'
   - Listen. Those witches are getting in the way of my business. They come at night,
     cackling and stealing from my pile to make their own undead goons!
   - "It\u2019s getting on my nerves! Can't they just support a local business like
@@ -22,5 +22,5 @@ MonoBehaviour:
   - I don't mind sharing bones, but I want something in return. You want to build
     up your tower right?
   - Say what - i'll help you build a floor every time you show the forest covenant
-    what's what. That's a promise!
+    what's what. That's a promise!"
   responses: []
