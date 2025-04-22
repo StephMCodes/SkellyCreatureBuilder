@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0591fbcfe6de1934592f3baf553b631e, type: 3}
+  m_Name: BaseTuto
+  m_EditorClassIdentifier: 
+  dialogue:
+  - The Depths, where I've established my base.
+  - On the left you see the dark forest where the witch covenant likes to congregate,
+    attempting to create creatures of their own. They think they can imitate me.
+  - On the right is the Junkyard where the bones discarded by the Order fall. Scraps,
+    the Garbage Collector spirit, calls that place home.
+  - 'At the heart of it all is where I''m building the Necrospire to reach the Order
+    once more. But I''m lacking supplies: bones. Scraps said he could help.'
+  - I could ask him for details. I know for a fact he wants me to defeat some witches.
+  - To face the witches, I put my creatures together and weave a facsimile of life
+    within them. They never last long, condemning me to eternally make new ones,
+    but they serve their purpose.
+  - Let's do this.
+  responses: []

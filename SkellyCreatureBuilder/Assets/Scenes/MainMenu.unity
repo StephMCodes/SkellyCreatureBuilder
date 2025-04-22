@@ -1710,7 +1710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -10}
+  m_AnchoredPosition: {x: -1, y: -209}
   m_SizeDelta: {x: 800, y: 462.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023839889
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.67058825}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.38039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2342,15 +2342,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Bella P. -Programmer and Level design
 
-    Omar I. - Programmer snd Artist
+    Omar I. - Programmer and Artist
 
     Ruth
     G. -Programmer
 
-    Stephanie M. -Programmer and Levl Design
+    Stephanie M. -Programmer and Level Design
 
-    Sara M. - Charcter
-    and Enviornmental Art'
+    Sara M. -
+    Character and Environmental Art'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
   m_sharedMaterial: {fileID: 8992645588986312400, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
@@ -2668,8 +2668,8 @@ RectTransform:
   m_Children:
   - {fileID: 1675613378}
   - {fileID: 1023839888}
-  - {fileID: 1054080846}
   - {fileID: 410659087}
+  - {fileID: 1054080846}
   - {fileID: 1730712252}
   - {fileID: 1008022491}
   - {fileID: 747061835}
