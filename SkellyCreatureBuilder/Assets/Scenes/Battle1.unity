@@ -268,8 +268,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are a winner winner chicken DINNER. You actually have a decent amount
-    of skill. Quite the shocker.... '
+  m_text: The witch exclaims she is shocked my creatures have any brawn. Thanks..?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
   m_sharedMaterial: {fileID: 8992645588986312400, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
@@ -1251,8 +1250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GASP... you are not him/her or even them... But you tried ....I supose.
-    Get better or something. Go on a training arc ;-;
+  m_text: The witch cackles that I should get on a training arc. Embarassing...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
   m_sharedMaterial: {fileID: 8992645588986312400, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
