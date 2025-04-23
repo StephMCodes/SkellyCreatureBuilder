@@ -84,29 +84,43 @@ public class Ribcage : MonoBehaviour
         float wiggleSpeed = 10f;
         float boneWiggleIntensity = 30f;
         float ribcageWiggleIntensity = 10f;
+        float duration = 4f; // total time to wiggle
 
-        while (true)
+        float timer = 0f;
+
+        while (timer < duration)
         {
-            // wiggle the ribcage but less intense
-            float ribcageRotation = Mathf.Sin(Time.time * wiggleSpeed) * ribcageWiggleIntensity;
+            timer += Time.deltaTime;
+            float t = timer / duration; // goes from 0 to 1 over time
+
+            // slowly reduce intensity over time
+            float currentBoneIntensity = Mathf.Lerp(boneWiggleIntensity, 0f, t);
+            float currentRibcageIntensity = Mathf.Lerp(ribcageWiggleIntensity, 0f, t);
+
+            float ribcageRotation = Mathf.Sin(Time.time * wiggleSpeed) * currentRibcageIntensity;
             transform.localRotation = Quaternion.Euler(0f, 0f, ribcageRotation);
 
-            // go through all sockets to rotate
             foreach (Transform socket in attachmentPoints)
-            {   
+            {
                 if (socket != null)
                 {
-
-                    float randomRotation = Mathf.Sin(Time.time * wiggleSpeed) * boneWiggleIntensity;
-
-                    // rotate the socket, maybe later add general socket rotation for more dynamic looking wiggling ?
+                    float randomRotation = Mathf.Sin(Time.time * wiggleSpeed) * currentBoneIntensity;
                     socket.localRotation = Quaternion.Euler(0f, 0f, randomRotation);
                 }
             }
 
-            yield return null; // required for couroutine 
+            yield return null;
+        }
+
+        // when done, reset rotation
+        transform.localRotation = Quaternion.identity;
+        foreach (Transform socket in attachmentPoints)
+        {
+            if (socket != null)
+                socket.localRotation = Quaternion.identity;
         }
     }
+
 
     IEnumerator WiggleOneSocket(Transform socket)
     {
