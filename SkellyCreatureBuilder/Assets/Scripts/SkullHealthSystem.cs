@@ -30,8 +30,8 @@ public class SkullHealthSystem : MonoBehaviour
             else
             {
                 // if skull was visible but now lost, animate its loss
-                if (skullIcons[i].enabled)
-                    StartCoroutine(AnimateSkullLoss(skullIcons[i]));
+                if (skullIcons[i].enabled) { }
+                    //StartCoroutine(AnimateSkullLoss(skullIcons[i]));
             }
         }
 
@@ -58,38 +58,19 @@ public class SkullHealthSystem : MonoBehaviour
     }
 
     // animate skull and fancy visuals
-    private IEnumerator AnimateSkullLoss(Image skull)
-    {
-        float flashDuration = 0.15f;
-        float holdDuration = 0.3f;
-        float fadeOutDuration = 0.4f;
+    //private IEnumerator AnimateSkullLoss(Image skull)
+    //{
+     
 
-        Color originalColor = skull.color;
-        Vector3 originalScale = skull.transform.localScale;
+    //    Color originalColor = skull.color;
+    //    Vector3 originalScale = skull.transform.localScale;
 
-        //flashes and bigger
-        skull.color = Color.red;
-        skull.transform.localScale = originalScale * 1.2f;
-        yield return new WaitForSeconds(flashDuration);
+   
 
-        // hold red
-        yield return new WaitForSeconds(holdDuration);
-
-        // fades out 
-        float elapsed = 0f;
-        while (elapsed < fadeOutDuration)
-        {
-            elapsed += Time.deltaTime;
-            float t = elapsed / fadeOutDuration;
-            skull.color = Color.Lerp(Color.red, new Color(1, 1, 1, 0), t);
-            yield return null;
-        }
-
-        //fully disable skull icon
-        skull.enabled = false;
-        skull.transform.localScale = originalScale;
-        skull.color = originalColor;
-    }
+    //    //fully disable skull icon
+    //    skull.enabled = false;
+    //    skull.transform.localScale = originalScale;
+    //}
 
     // shakes the last skull 
     private IEnumerator ShakeSkull(Transform skullTransform)
