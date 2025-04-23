@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneFlowButton : MonoBehaviour
 {
-    public void OnSceneFlowButtonPressed()
-    {
-        if (ScneFlowManagement.Instance != null)
-            ScneFlowManagement.Instance.LoadNextScene();
-        else
-            Debug.LogError("SceneFlowManager not found in the scene.");
-    }
+    //public void OnSceneFlowButtonPressed()
+    //{
+    //    if (ScneFlowManagement.Instance != null)
+    //        ScneFlowManagement.Instance.LoadNextScene();
+    //    else
+    //        Debug.LogError("SceneFlowManager not found in the scene.");
+    //}
 
-    void Start()
-    {
-        Debug.Log("SceneFlowManager alive in: " + SceneManager.GetActiveScene().name);
-    }
+    //void Start()
+    //{
+    //    Debug.Log("SceneFlowManager alive in: " + SceneManager.GetActiveScene().name);
+    //}
 }

@@ -17,13 +17,13 @@ public class MiniGameRandomizer : MonoBehaviour
         for (int i = 0; i < 3 && tempPool.Count > 0; i++)
         {
             int index = Random.Range(0, tempPool.Count);
-            SelectedMiniGames.Add(tempPool[index]);
+            string selected = tempPool[index];
+            SelectedMiniGames.Add(selected);
             tempPool.RemoveAt(index);
         }
 
-        Debug.Log("Selected: " + string.Join(", ", SelectedMiniGames));
+        Debug.Log("Randomized MiniGames: " + string.Join(", ", SelectedMiniGames));
 
-        // Now start the first minigame
         miniGamePlayer.PlayNextMiniGame();
     }
 }

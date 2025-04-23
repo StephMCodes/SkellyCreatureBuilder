@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MiniGamePlayer : MonoBehaviour
 {
-    private int current = 0;
+    private static int current = 0;
 
     public void PlayNextMiniGame()
     {
+        Debug.Log($"PlayNextMiniGame: current = {current}, list count = {MiniGameRandomizer.SelectedMiniGames.Count}");
+
         Debug.Log(" MiniGame List: " + string.Join(", ", MiniGameRandomizer.SelectedMiniGames));
 
         if (current < MiniGameRandomizer.SelectedMiniGames.Count)
@@ -19,6 +21,7 @@ public class MiniGamePlayer : MonoBehaviour
         }
         else
         {
+            current = 0;
             SceneManager.LoadScene(MiniGameState.NextBaseScene);
         }
     }
