@@ -2050,7 +2050,7 @@ PrefabInstance:
     - target: {fileID: 5168694044452464096, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_text
       value: I can't believe what truly got me down in the dumps is a trivia game
-        about bones. Is this what failure feel like...?
+        about bones. Is this what failure feels like...?
       objectReference: {fileID: 0}
     - target: {fileID: 5586101453060540121, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_LocalScale.x
@@ -5086,7 +5086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168694044452464096, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_text
-      value: I won the trivia of bones hahaaa... What mere mortal would lose this
+      value: I won the trivia of bones... haha! Only a mere mortal would lose this
         silly contest.
       objectReference: {fileID: 0}
     - target: {fileID: 5586101453060540121, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}

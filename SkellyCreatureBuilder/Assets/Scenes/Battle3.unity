@@ -1045,8 +1045,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168694044452464096, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_text
-      value: It appears you have quite a bright mind. Quick and witty. Your win may
-        go down in history books...
+      value: '"It appears you have quite a bright mind. Quick and witty. Your win
+        may go down in history books..."'
       objectReference: {fileID: 0}
     - target: {fileID: 5586101453060540121, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_LocalScale.x
@@ -1812,8 +1812,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168694044452464096, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_text
-      value: It appears your creature missing skill and IQ. Definitely not the brains
-        of any operation. Your defeat is pitiful and will go down in history books...
+      value: '"It appears your creature missing skill and IQ. Definitely not the
+        brains of any operation. Your defeat is pitiful and will go down in history
+        books..."'
       objectReference: {fileID: 0}
     - target: {fileID: 5586101453060540121, guid: 7df46d368f33334498527bc7ae2a5f85, type: 3}
       propertyPath: m_LocalScale.y

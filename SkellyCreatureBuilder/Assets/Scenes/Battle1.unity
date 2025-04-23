@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The witch exclaims she is shocked my creatures have any brawn. Thanks..?
+  m_text: The witch exclaims she is impressed my creatures have any brawn. Thanks..?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}
   m_sharedMaterial: {fileID: 8992645588986312400, guid: e8fec793c3fa68b458a2918e394396a9, type: 2}

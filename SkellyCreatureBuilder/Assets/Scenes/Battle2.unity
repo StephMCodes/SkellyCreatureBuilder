@@ -2158,8 +2158,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'I don''t know how to tell you this... but... you are... lame. You lost
-    against a ghastly witch in this political climate...YIKES
+  m_text: 'The witch exclaims: "I outdid the doer. My creature is formidable enemy!
+    It''s legs are bigger, faster, and stronger!!"
 
 '
   m_isRightToLeft: 0
@@ -4517,6 +4517,13 @@ PrefabInstance:
     - target: {fileID: 13182235243336476, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
       propertyPath: m_Name
       value: Win Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 606501627649204470, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
+      propertyPath: m_text
+      value: 'Aha! She thought those measly leg bones would get her creature the
+        win, but she was wrong!
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1308491641074047956, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
       propertyPath: m_Pivot.x
