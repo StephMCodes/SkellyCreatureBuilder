@@ -26,12 +26,26 @@ public class InventoryManager : MonoBehaviour
     private LinkedList<ItemData> inventoryItems = new LinkedList<ItemData>();
     private bool isDropping = false;
 
+    public int randomItemsToAdd = 3; 
+
+
     void Start()
     {
-        foreach (var item in itemsToAdd)
+        if (itemsToAdd.Count > 0)
         {
-            AddItem(item);
+            for (int i = 0; i < randomItemsToAdd; i++)
+            {
+                ItemData randomItem = itemsToAdd[Random.Range(0, itemsToAdd.Count)];
+
+                // copy so u dont modify original
+                ItemData newItem = new ItemData();
+                newItem.prefabToSpawn = randomItem.prefabToSpawn;
+                newItem.itemSprite = randomItem.itemSprite;
+
+                AddItem(newItem);
+            }
         }
+
 
         foreach (var bonePrefab in BoneTransfer.bonesToTransfer)
         {

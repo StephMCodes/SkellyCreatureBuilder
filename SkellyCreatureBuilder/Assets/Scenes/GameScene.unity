@@ -1958,6 +1958,7 @@ MonoBehaviour:
   itemUIPrefab: {fileID: 4613754910734990564, guid: 4f8345e7b1f67884fbdab50df4a893b8, type: 3}
   dropInterval: 0.5
   spawnPoint: {fileID: 1445870183}
+  randomItemsToAdd: 10
 --- !u!4 &1926610971
 Transform:
   m_ObjectHideFlags: 0
