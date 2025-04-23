@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPoint: {fileID: 2987512770385897354}
-  attachRotationOffset: {x: 0, y: 0, z: 0}
+  BoneClip: {fileID: 0}
 --- !u!114 &753907928801646218
 MonoBehaviour:
   m_ObjectHideFlags: 0

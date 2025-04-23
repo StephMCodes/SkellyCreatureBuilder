@@ -9,11 +9,15 @@ public class Bone : MonoBehaviour
     private Camera mainCamera;
     private float objectZDistance;
     [SerializeField] private Transform snapPoint;
+    private AudioSource AudioPlayer;
+    [SerializeField] AudioClip BoneClip;
 
 
     void Start()
     {
         mainCamera = Camera.main;
+        //Fetch the AudioSource from the GameObject
+        AudioPlayer = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -75,6 +79,9 @@ void OnMouseUp()
 
         // Re-parent
         transform.SetParent(socket);
+
+        //play sfx
+        AudioPlayer.PlayOneShot(BoneClip);
 
         // Disable physics
         Rigidbody rb = GetComponent<Rigidbody>();

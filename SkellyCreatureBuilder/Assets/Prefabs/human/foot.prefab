@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapPoint: {fileID: 3796835761156709786}
+  BoneClip: {fileID: 0}
 --- !u!114 &753907928801646218
 MonoBehaviour:
   m_ObjectHideFlags: 0
