@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ScneFlowManagement : MonoBehaviour
 {
+    public static ScneFlowManagement Instance;
+
     [Header("Mini game scenes")]
     [SerializeField] private List<string> allMiniScenes;
 
@@ -22,8 +24,23 @@ public class ScneFlowManagement : MonoBehaviour
     private int cyclesCompleted = 0;
     private bool enteringFromBuildScene = false;
 
-    public static ScneFlowManagement Instance;
+    void Start()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
 
+        if (currentScene == "Loader")
+        {
+            SceneManager.LoadScene("MainMenu"); 
+            return;
+        }
+
+        if (currentScene == buildCreatureScene)
+        {
+            enteringFromBuildScene = true;
+            StartNewMiniSceneCycle();
+            return;
+        }
+    }
     void Awake()
     {
         if (Instance == null)
@@ -39,12 +56,12 @@ public class ScneFlowManagement : MonoBehaviour
         }
     }
 
-    void ResetMiniScenePool()
+    private void ResetMiniScenePool()
     {
         unusedMiniScenes = new List<string>(allMiniScenes);
     }
 
-    void StartNewMiniSceneCycle()
+    private void StartNewMiniSceneCycle()
     {
         currentCycleScenes.Clear();
 
@@ -65,17 +82,19 @@ public class ScneFlowManagement : MonoBehaviour
 
     public void LoadNextScene()
     {
+        // Called from BuildCreature scene
         if (SceneManager.GetActiveScene().name == buildCreatureScene)
         {
             enteringFromBuildScene = true;
             StartNewMiniSceneCycle();
-            LoadNextScene(); // immediately go to first mini-game
-            return;
+            return; // Wait for player to press button before continuing
         }
 
+        // After BuildCreature: load next mini-game
         if (enteringFromBuildScene)
         {
             enteringFromBuildScene = false;
+
             if (currentMiniSceneIndex < currentCycleScenes.Count)
             {
                 string miniScene = currentCycleScenes[currentMiniSceneIndex];
@@ -93,17 +112,18 @@ public class ScneFlowManagement : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("All bases complete — end of game.");
+                    Debug.Log("All base scenes completed — end of game.");
                 }
             }
+
             return;
         }
 
-        // From a base scene: go to BuildCreature next
+        // From a base scene: go to BuildCreature
         SceneManager.LoadScene(buildCreatureScene);
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == baseScenes[0])
         {
@@ -111,3 +131,4 @@ public class ScneFlowManagement : MonoBehaviour
         }
     }
 }
+
