@@ -70,6 +70,7 @@ public class DialogueUI : MonoBehaviour
         //}
         //CloseDialogueBox();
 
+
         //the foreach becomes a for loop because if there are options
         //we dont want user to skip them by pressing spacebar
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)

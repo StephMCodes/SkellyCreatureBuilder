@@ -20,7 +20,11 @@ MonoBehaviour:
     the Garbage Collector spirit, calls that place home.
   - 'At the heart of it all is where I''m building the Necrospire to reach the Order
     once more. But I''m lacking supplies: bones. Scraps said he could help.'
-  - I could ask him for details. I know for a fact he wants me to defeat some witches.
+  - To face the witches, I put my creatures together and weave a facsimile of life
+    within them. They never last long, condemning me to eternally make new ones,
+    but they serve their purpose.
+  - Let's check in with Scraps, my supply guy. I know for a fact he wants me to defeat
+    some witches.
   responses:
   - responseText: Let's do this.
-    dialogueObject: {fileID: 11400000, guid: d71aedfbf65d5f84180dbec8ed02eba2, type: 2}
+    dialogueObject: {fileID: 11400000, guid: a1168b199de3ca24a927f4aa2dff3b2c, type: 2}
