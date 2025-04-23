@@ -475,9 +475,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 165208001}
-        m_TargetAssemblyTypeName: Battle2Controller, Assembly-CSharp
-        m_MethodName: LoadRandomScene
+      - m_Target: {fileID: 119829392}
+        m_TargetAssemblyTypeName: SceneFlowButton, Assembly-CSharp
+        m_MethodName: OnSceneFlowButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -663,6 +663,74 @@ MonoBehaviour:
   handStrengthBonus: 1
   baseMental: 1
   skullMentalBonus: 1
+--- !u!1001 &119829391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1150.311
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 686.74896
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.500665
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687044697701863071, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203823121527523627, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+      propertyPath: m_Name
+      value: SceneFlow Button
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+--- !u!114 &119829392 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7027552948897523366, guid: 440a7b6dba95ba1488c2a2f976803da1, type: 3}
+  m_PrefabInstance: {fileID: 119829391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c376b9064402044f9cf0ace4afd2ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &146772082
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +889,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165208000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b06401a6cda2526459d6907c65cc6c4a, type: 3}
   m_Name: 
@@ -6501,9 +6569,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3728011597816752915, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728011597816752915, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 165208001}
+      objectReference: {fileID: 119829392}
+    - target: {fileID: 3728011597816752915, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSceneFlowButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728011597816752915, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneFlowButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728011597816752915, guid: 49f4c4a307736164680a5ed554d3523e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6527,3 +6611,4 @@ SceneRoots:
   - {fileID: 532355368}
   - {fileID: 2132148291}
   - {fileID: 165208002}
+  - {fileID: 119829391}

@@ -5551,9 +5551,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 751891314}
-        m_TargetAssemblyTypeName: BaseController, Assembly-CSharp
-        m_MethodName: OpenBattle1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneFlowButton, Assembly-CSharp
+        m_MethodName: OnSceneFlowButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5892,6 +5892,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857152461}
   m_CullTransparentMesh: 1
+--- !u!1 &1890631399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1890631401}
+  - component: {fileID: 1890631400}
+  m_Layer: 0
+  m_Name: EndSceneLoad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1890631400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890631399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07befd0f234f641438c1d8ebfdab2c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: OutroScene
+--- !u!4 &1890631401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890631399}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 723.0955, y: 516.5441, z: -6.8343105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1891429174
 GameObject:
   m_ObjectHideFlags: 0
@@ -7135,3 +7180,4 @@ SceneRoots:
   - {fileID: 1267031062}
   - {fileID: 1205970765}
   - {fileID: 912869124}
+  - {fileID: 1890631401}
