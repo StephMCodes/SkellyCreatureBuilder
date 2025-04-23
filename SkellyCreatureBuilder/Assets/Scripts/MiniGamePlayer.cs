@@ -9,6 +9,8 @@ public class MiniGamePlayer : MonoBehaviour
 
     public void PlayNextMiniGame()
     {
+        Debug.Log(" MiniGame List: " + string.Join(", ", MiniGameRandomizer.SelectedMiniGames));
+
         if (current < MiniGameRandomizer.SelectedMiniGames.Count)
         {
             string sceneToLoad = MiniGameRandomizer.SelectedMiniGames[current];
@@ -17,7 +19,6 @@ public class MiniGamePlayer : MonoBehaviour
         }
         else
         {
-            Debug.Log("All mini-games done. Going to: " + MiniGameState.NextBaseScene);
             SceneManager.LoadScene(MiniGameState.NextBaseScene);
         }
     }

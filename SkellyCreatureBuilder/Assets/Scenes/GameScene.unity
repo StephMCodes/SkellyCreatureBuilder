@@ -1761,7 +1761,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1996565057}
         m_TargetAssemblyTypeName: MiniGameRandomizer, Assembly-CSharp
-        m_MethodName: StartMinigameSequence
+        m_MethodName: StartAndPlaySequence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3539,12 +3539,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c571c9bdeaaf74da1cb5b13ecc0b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miniGames:
+  miniGamePool:
   - Battle1
   - Battle2
   - Battle3
   - TriviaMemory
   - TrueFalseMemory
+  miniGamePlayer: {fileID: 1696133116}
 --- !u!4 &1996565058
 Transform:
   m_ObjectHideFlags: 0

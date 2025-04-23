@@ -4,27 +4,15 @@ using UnityEngine;
 
 public class MiniGameRandomizer : MonoBehaviour
 {
-    // available game scene 
-    [SerializeField] private List<string> miniGames;
+    [SerializeField] private List<string> miniGamePool;
+    [SerializeField] private MiniGamePlayer miniGamePlayer;
 
-    // stores the 3 selected mini game names
     public static List<string> SelectedMiniGames { get; private set; } = new List<string>();
 
-    // called when the player clicks  button
-    public void StartMinigameSequence()
-    {
-        RandomizeMiniGames();
-
-        Debug.Log(" Mini-game sequence started!");
-        Debug.Log("Selected MiniGames: " + string.Join(", ", SelectedMiniGames));
-    }
-
-    // picks 3 random mini-game scenes without repeating
-    private void RandomizeMiniGames()
+    public void StartAndPlaySequence()
     {
         SelectedMiniGames.Clear();
-
-        List<string> tempPool = new List<string>(miniGames);
+        List<string> tempPool = new List<string>(miniGamePool);
 
         for (int i = 0; i < 3 && tempPool.Count > 0; i++)
         {
@@ -32,5 +20,10 @@ public class MiniGameRandomizer : MonoBehaviour
             SelectedMiniGames.Add(tempPool[index]);
             tempPool.RemoveAt(index);
         }
+
+        Debug.Log("Selected: " + string.Join(", ", SelectedMiniGames));
+
+        // Now start the first minigame
+        miniGamePlayer.PlayNextMiniGame();
     }
 }
