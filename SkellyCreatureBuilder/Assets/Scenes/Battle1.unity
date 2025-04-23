@@ -4837,6 +4837,18 @@ PrefabInstance:
       value: 1.2475
       objectReference: {fileID: 0}
     - target: {fileID: 731365966399434441, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 731365966399434441, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 731365966399434441, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 731365966399434441, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -5011,6 +5023,18 @@ PrefabInstance:
     - target: {fileID: 4165284970153094898, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_Name
       value: Success Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.3647059
       objectReference: {fileID: 0}
     - target: {fileID: 4260026307198062144, guid: b107c8fc6b180b2478ec5fd119e951ef, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
