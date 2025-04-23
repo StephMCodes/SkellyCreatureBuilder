@@ -2589,8 +2589,6 @@ GameObject:
   - component: {fileID: 1398178002}
   - component: {fileID: 1398178001}
   - component: {fileID: 1398178000}
-  - component: {fileID: 1398178004}
-  - component: {fileID: 1398178003}
   m_Layer: 5
   m_Name: BeginButton
   m_TagString: Untagged
@@ -2662,18 +2660,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1930513060}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PlayerGetsDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1561172605}
         m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
         m_MethodName: Begin
@@ -2724,34 +2710,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398177998}
   m_CullTransparentMesh: 1
---- !u!114 &1398178003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398177998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543d48aec2ca8224a81bc1d108adf292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
---- !u!114 &1398178004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398177998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c55c6dc79b590e4418b4c8814b374b01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 5af35061e83215249908ae7102f2e78a, type: 2}
-  player: {fileID: 1930513060}
 --- !u!1 &1545001805
 GameObject:
   m_ObjectHideFlags: 0
