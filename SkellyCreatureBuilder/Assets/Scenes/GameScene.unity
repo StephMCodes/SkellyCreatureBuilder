@@ -1463,7 +1463,7 @@ Transform:
   m_GameObject: {fileID: 1445870182}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.86, y: 5.38, z: -4.78}
+  m_LocalPosition: {x: -2.86, y: 5.38, z: -3.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   itemUIPrefab: {fileID: 4613754910734990564, guid: 4f8345e7b1f67884fbdab50df4a893b8, type: 3}
   dropInterval: 0.5
   spawnPoint: {fileID: 1445870183}
-  randomItemsToAdd: 10
+  randomItemsToAdd: 5
 --- !u!4 &1926610971
 Transform:
   m_ObjectHideFlags: 0
