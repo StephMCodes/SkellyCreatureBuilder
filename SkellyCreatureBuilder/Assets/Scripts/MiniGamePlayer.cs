@@ -17,7 +17,7 @@ public class MiniGamePlayer : MonoBehaviour
         }
         else
         {
-            // use the globally stored scene name for the next base
+            Debug.Log("All mini-games done. Going to: " + MiniGameState.NextBaseScene);
             SceneManager.LoadScene(MiniGameState.NextBaseScene);
         }
     }
