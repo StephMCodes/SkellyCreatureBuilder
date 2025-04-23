@@ -24,6 +24,6 @@ public class MiniGameRandomizer : MonoBehaviour
 
         Debug.Log("Randomized MiniGames: " + string.Join(", ", SelectedMiniGames));
 
-        miniGamePlayer.PlayNextMiniGame();
+        //miniGamePlayer.PlayNextMiniGame();
     }
 }
