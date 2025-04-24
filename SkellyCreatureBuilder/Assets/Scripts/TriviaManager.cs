@@ -5,7 +5,7 @@ using TMPro;
 
 public class TriviaManager : MonoBehaviour
 {
-    private char[] correctAnswers = { 'B', 'B', 'A', 'D', 'A' };
+    private char[] correctAnswers = { 'B', 'B', 'D', 'A', 'B' };
     private int currentQuestionIndex = 0;
     private int score = 0;
     private int mistakesAllowed;

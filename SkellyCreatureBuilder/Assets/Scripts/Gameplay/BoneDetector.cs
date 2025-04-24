@@ -17,24 +17,40 @@ public class BoneDetector : MonoBehaviour
     public static float strength;
     public static float mental;
 
+    public void SetBones()
+    {
+        // count how many grandchildren carry the given tag
+        int footCount = CountTaggedParts("foot");
+        int handCount = CountTaggedParts("hand");
+        int skullCount = CountTaggedParts("skull");
+
+        // not the final way the stats should be counted but its a start
+        speed = footCount;
+        strength = handCount;
+        mental = skullCount;
+
+        Debug.Log($"foots: {footCount} -> speed: {speed}");
+        Debug.Log($"hands: {handCount} -> strength: {strength}");
+        Debug.Log($"skulls: {skullCount} -> mental: {mental}");
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // count how many grandchildren carry the given tag
-            int footCount = CountTaggedParts("foot");
-            int handCount = CountTaggedParts("hand");
-            int skullCount = CountTaggedParts("skull");
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    // count how many grandchildren carry the given tag
+        //    int footCount = CountTaggedParts("foot");
+        //    int handCount = CountTaggedParts("hand");
+        //    int skullCount = CountTaggedParts("skull");
 
-            // not the final way the stats should be counted but its a start
-            speed = footCount;
-            strength = handCount;
-            mental =skullCount;
+        //    // not the final way the stats should be counted but its a start
+        //    speed = footCount;
+        //    strength = handCount;
+        //    mental =skullCount;
 
-            Debug.Log($"foots: {footCount} -> speed: {speed}");
-            Debug.Log($"hands: {handCount} -> strength: {strength}");
-            Debug.Log($"skulls: {skullCount} -> mental: {mental}");
-        }
+        //    Debug.Log($"foots: {footCount} -> speed: {speed}");
+        //    Debug.Log($"hands: {handCount} -> strength: {strength}");
+        //    Debug.Log($"skulls: {skullCount} -> mental: {mental}");
+        //}
     }
 
 
