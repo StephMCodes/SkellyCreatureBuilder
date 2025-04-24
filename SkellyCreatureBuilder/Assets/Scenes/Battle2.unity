@@ -339,9 +339,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 895927221}
-        m_TargetAssemblyTypeName: MiniGamePlayer, Assembly-CSharp
-        m_MethodName: PlayNextMiniGame
+      - m_Target: {fileID: 421902349}
+        m_TargetAssemblyTypeName: LoseRedirect, Assembly-CSharp
+        m_MethodName: SendPlayerToCorrectFailBase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1501,6 +1501,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411933713}
   m_CullTransparentMesh: 1
+--- !u!1001 &421902348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2386436201590490701, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_Name
+      value: LoseRedirect
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 698.3988
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 479.96262
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.5102806
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202659841416874494, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+--- !u!114 &421902349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7472239884192515392, guid: 3af732d5dc8343249bc07dc217d130b4, type: 3}
+  m_PrefabInstance: {fileID: 421902348}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8867bee04059640b4d0e0c6221d2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &520664112
 GameObject:
   m_ObjectHideFlags: 0
@@ -4833,3 +4901,4 @@ SceneRoots:
   - {fileID: 2132148291}
   - {fileID: 165208002}
   - {fileID: 895927220}
+  - {fileID: 421902348}

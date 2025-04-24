@@ -25,4 +25,15 @@ public class MiniGamePlayer : MonoBehaviour
             SceneManager.LoadScene(MiniGameState.NextBaseScene);
         }
     }
+    public static void ResetCycle()
+    {
+        current = 0;
+
+        if (MiniGameRandomizer.SelectedMiniGames != null)
+        {
+            MiniGameRandomizer.SelectedMiniGames.Clear();
+        }
+
+        Debug.Log(" mini-game cycle has been reset.");
+    }
 }
