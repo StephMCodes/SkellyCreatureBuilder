@@ -31,22 +31,22 @@ public class spaceSmashGame : MonoBehaviour
     public float gameDuration = 20f;
 
     [Header("SpaceBar Flash")]
-  public RawImage flashImage;
-public Color flashColorStart = new Color(0f, 0f, 0.545f); // Deep Blue (#00008B)
-public Color flashColorEnd = Color.white;
-public float flashDuration = 0.5f;
-public float pulseSpeed = 5f;
+    public RawImage flashImage;
+    public Color flashColorStart = new Color(0f, 0f, 0.545f); // Deep Blue (#00008B)
+    public Color flashColorEnd = Color.white;
+    public float flashDuration = 0.5f;
+    public float pulseSpeed = 5f;
 
-private bool isFlashing = false;
-private float flashTimer = 0f;
+    private bool isFlashing = false;
+    private float flashTimer = 0f;
 
-    private int score = 0;
+    private float score = 0;
     private float timer;
     private bool gameRunning = false;
     private int targetScore;
 
     // Bone bonus
-    private int legBoneBonus = 0;
+    private float legBoneBonus = 0;
     private bool bonesDetected = false;
 
     void PlaySound(AudioClip clip)
@@ -66,13 +66,13 @@ private float flashTimer = 0f;
     void Start()
     {
         audioSourceSteps = GetComponent<AudioSource>();
-        
+
         score = 0;
         timer = gameDuration;
         gameRunning = true;
 
         //randomize win number
-        targetScore = Random.Range(120, 151); 
+        targetScore = Random.Range(120, 151);
         UpdateUI();
 
         if (targetScoreText != null)
@@ -84,14 +84,14 @@ private float flashTimer = 0f;
         // BoneDetector bonus 
         if (BoneDetector.speed > 0)
         {
-            int legBones = Mathf.FloorToInt(BoneDetector.speed);
-            legBoneBonus = Mathf.Max(0, legBones - 1); // 1 foot is normal
+            //int legCount = Mathf.FloorToInt(BoneDetector.speed);
+            legBoneBonus = BoneDetector.speed - 1; // 1 foot is normal
             bonesDetected = true;
 
             if (bonusText != null)
                 bonusText.text = $"+{legBoneBonus} extra points per press from bones";
 
-            Debug.Log($"Leg bones detected: {legBones} | Bonus per space: +{legBoneBonus}");
+            Debug.Log($"Leg bones detected: {BoneDetector.speed} | Bonus per space: +{legBoneBonus}");
         }
         else
         {
