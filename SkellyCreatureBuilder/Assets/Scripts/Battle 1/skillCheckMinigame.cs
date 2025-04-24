@@ -38,14 +38,14 @@ public class skillCheckMinigame : MonoBehaviour
     private bool inputEnabled = true;
 
     // arm count from Bone detector
-    float armCount = BoneDetector.strength;
+   // float armCount = BoneDetector.strength;
 
     void Start()
     {
         // Sets rotation speed 1 arm = 450 an extra arm -100
-        rotationSpeed = Mathf.Max(50f, 450f - (Mathf.Max(armCount - 1, 0) * 100f)); // Prevents negative speed
+        rotationSpeed = Mathf.Max(50f, 450f - (Mathf.Max(BoneDetector.strength - 1, 0) * 100f)); // Prevents negative speed
 
-        Debug.Log($"Arm count: {armCount}, Rotation Speed: {rotationSpeed}");
+        Debug.Log($"Arm count: {BoneDetector.strength}, Rotation Speed: {rotationSpeed}");
 
         UpdateSuccessText();
         ResetZoneAngle();
@@ -79,10 +79,10 @@ public class skillCheckMinigame : MonoBehaviour
             PlaySound(ding);
             PlaySound(punch);
         }
-        else if (armCount >0)
+        else if (BoneDetector.strength > 0)
         {
-            armCount--;
-            Debug.Log("MISS! arms left: " + armCount);
+            BoneDetector.strength--;
+            Debug.Log("MISS! arms left: " + BoneDetector.strength);
             PlaySound(bonecrack);
         }
         else

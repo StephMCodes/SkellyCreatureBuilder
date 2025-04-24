@@ -42,6 +42,7 @@ public class TrueFalseMemManager : MonoBehaviour
         else
         {
             currentMistakes++;
+            BoneDetector.mental--;
             feedbackText.text = $"Wrong! Mistakes: {currentMistakes}/{allowedMistakes}";
 
             if (currentMistakes > allowedMistakes)
