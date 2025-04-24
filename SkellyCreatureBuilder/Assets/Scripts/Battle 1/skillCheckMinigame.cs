@@ -126,7 +126,7 @@ public class skillCheckMinigame : MonoBehaviour
         gameActive = false;
         successText.text = $"FINAL RESULT: {successCount} / {maxChances} successful";
 
-        if (successCount == maxChances)
+        if (BoneDetector.strength >0)
         {
             if (winPanel != null) winPanel.SetActive(true);
             MusicPlayer.SetActive(false);
