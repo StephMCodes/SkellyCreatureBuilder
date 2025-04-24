@@ -39,31 +39,37 @@ public class Bone : MonoBehaviour
         objectZDistance = mainCamera.WorldToScreenPoint(transform.position).z;
 
         offset = transform.position - mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, objectZDistance));
-    }
 
-void OnMouseUp()
-{
-    isDragging = false;
-
-    // Check for nearby ribcage colliders
-    Collider[] colliders = Physics.OverlapSphere(transform.position, 0.5f); // 0.5 is the radius around the bone, tweak if needed
-    foreach (Collider collider in colliders)
-    {
-        Ribcage ribcage = collider.GetComponent<Ribcage>();
-        if (ribcage != null)
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
         {
-            // Found a ribcage, attach to closest socket
-            Transform socket = ribcage.GetClosestSocket(transform.position);
-            if (socket != null)
-            {
-                AttachTo(socket);
-                return; // We're done, no need to check other colliders
-            }
+            Destroy(rb);
         }
     }
 
-    Debug.Log("No ribcage nearby to attach.");
-}
+    void OnMouseUp()
+    {
+        isDragging = false;
+
+        // Check for nearby ribcage colliders
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 1); // 0.5 is the radius around the bone, tweak if needed
+        foreach (Collider collider in colliders)
+        {
+            Ribcage ribcage = collider.GetComponent<Ribcage>();
+            if (ribcage != null)
+            {
+                // Found a ribcage, attach to closest socket
+                Transform socket = ribcage.GetClosestSocket(transform.position);
+                if (socket != null)
+                {
+                    AttachTo(socket);
+                    return; // We're done, no need to check other colliders
+                }
+            }
+        }
+
+        Debug.Log("No ribcage nearby to attach.");
+    }
 
 
     void AttachTo(Transform socket)
@@ -87,10 +93,7 @@ void OnMouseUp()
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.isKinematic = true;
-            rb.useGravity = false;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+            Destroy(rb);
         }
 
         Collider col = GetComponent<Collider>();
